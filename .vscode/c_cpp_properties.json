@@ -1,0 +1,45 @@
+{
+  "configurations": [
+    {
+      "name": "macOS (Clang C23)",
+      "includePath": [
+        "${workspaceFolder}/**"
+      ],
+      "defines": [
+        "DEBUG",
+        "_GNU_SOURCE"
+      ],
+      "compilerPath": "/usr/bin/clang",
+      "cStandard": "c23",
+      "cppStandard": "c++23",
+      "intelliSenseMode": "macos-clang-arm64",
+      "browse": {
+        "path": [
+          "${workspaceFolder}"
+        ],
+        "limitSymbolsToIncludedHeaders": false
+      }
+    },
+    {
+      "name": "Linux (GCC C23)",
+      "includePath": [
+        "${workspaceFolder}/**"
+      ],
+      "defines": [
+        "DEBUG",
+        "_GNU_SOURCE"
+      ],
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "c23",
+      "cppStandard": "c++23",
+      "intelliSenseMode": "linux-gcc-x64",
+      "browse": {
+        "path": [
+          "${workspaceFolder}"
+        ],
+        "limitSymbolsToIncludedHeaders": false
+      }
+    }
+  ],
+  "version": 4
+}
