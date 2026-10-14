@@ -12,18 +12,22 @@
 
 #include <isa/mode.h>
 
+swa16_word_t swa16_isa_mode_to(swa16_isa_mode_t mode)
+{
+    return (swa16_word_t)mode;
+}
+
 swa16_isa_mode_t swa16_isa_mode_from(swa16_word_t value)
 {
-    switch (value)
+    if (value > SWA16_ISA_MODE_END)
     {
-    case 0x0000: return SWA16_ISA_MODE_REG;
-    case 0x0001: return SWA16_ISA_MODE_IMM;
-
-    case 0xFFFF: return SWA16_ISA_MODE_NONE;
-
-    default:     return SWA16_ISA_MODE_NONE;
+        return SWA16_ISA_MODE_NONE;
     }
+
+    return (swa16_isa_mode_t)value;
 }
+
+
 
 const char* swa16_isa_mode_to_name(swa16_isa_mode_t mode)
 {
@@ -40,6 +44,11 @@ const char* swa16_isa_mode_to_name(swa16_isa_mode_t mode)
 
 swa16_isa_mode_t swa16_isa_mode_from_name(const char* name)
 {
+    if (name == NULL)
+    {
+        return SWA16_ISA_MODE_NONE;
+    }
+
     if (strcmp(name,  "REG") == 0) return SWA16_ISA_MODE_REG;
     if (strcmp(name,  "IMM") == 0) return SWA16_ISA_MODE_IMM;
 

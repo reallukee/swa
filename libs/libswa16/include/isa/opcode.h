@@ -17,7 +17,9 @@
 #include <utils/export.h>
 #include <utils/macros.h>
 
+#include <types/addr.h>
 #include <types/binint.h>
+#include <types/flag.h>
 
 SWA16_NAMESPACE_BEGIN
 
@@ -25,7 +27,7 @@ SWA16_NAMESPACE_BEGIN
 #define SWA16_ISA_OPCODE_END   0x000F
 #define SWA16_ISA_OPCODE_SIZE  (SWA16_ISA_OPCODE_END + 1)
 
-typedef enum swa16_isa_opcode
+typedef enum swa16_isa_opcode : swa16_word_t
 {
     SWA16_ISA_OPCODE_FLW  = 0x0000, // 0x0000 --- FLW
     SWA16_ISA_OPCODE_MOV  = 0x0001, // 0x0001 --- MOV
@@ -47,7 +49,9 @@ typedef enum swa16_isa_opcode
     SWA16_ISA_OPCODE_NONE = 0xFFFF, // 0xFFFF --- Fallback Value
 } swa16_isa_opcode_t;
 
-LIBSWA16_API swa16_isa_opcode_t swa16_isa_opcode_from     (swa16_word_t value);
+LIBSWA16_API swa16_word_t       swa16_isa_opcode_to  (swa16_isa_opcode_t opcode);
+LIBSWA16_API swa16_isa_opcode_t swa16_isa_opcode_from(swa16_word_t value);
+
 LIBSWA16_API const char*        swa16_isa_opcode_to_name  (swa16_isa_opcode_t opcode);
 LIBSWA16_API swa16_isa_opcode_t swa16_isa_opcode_from_name(const char* name);
 

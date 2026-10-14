@@ -17,7 +17,9 @@
 #include <utils/export.h>
 #include <utils/macros.h>
 
+#include <types/addr.h>
 #include <types/binint.h>
+#include <types/flag.h>
 
 SWA16_NAMESPACE_BEGIN
 
@@ -25,7 +27,7 @@ SWA16_NAMESPACE_BEGIN
 #define SWA16_ISA_MODE_END   0x0001
 #define SWA16_ISA_MODE_SIZE  (SWA16_ISA_MODE_END + 1)
 
-typedef enum swa16_isa_mode
+typedef enum swa16_isa_mode : swa16_word_t
 {
     SWA16_ISA_MODE_REG      = 0x0000, // 0x0000 --- REG
     SWA16_ISA_MODE_IMM      = 0x0001, // 0x0001 --- IMM
@@ -39,7 +41,9 @@ typedef enum swa16_isa_mode
     SWA16_ISA_MODE_NONE     = 0xFFFF, // 0xFFFF --- Fallback Value
 } swa16_isa_mode_t;
 
-LIBSWA16_API swa16_isa_mode_t swa16_isa_mode_from     (swa16_word_t value);
+LIBSWA16_API swa16_word_t     swa16_isa_mode_to  (swa16_isa_mode_t mode);
+LIBSWA16_API swa16_isa_mode_t swa16_isa_mode_from(swa16_word_t value);
+
 LIBSWA16_API const char*      swa16_isa_mode_to_name  (swa16_isa_mode_t mode);
 LIBSWA16_API swa16_isa_mode_t swa16_isa_mode_from_name(const char* name);
 

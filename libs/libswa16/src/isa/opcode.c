@@ -12,32 +12,22 @@
 
 #include <isa/opcode.h>
 
+swa16_word_t swa16_isa_opcode_to(swa16_isa_opcode_t opcode)
+{
+    return (swa16_word_t)opcode;
+}
+
 swa16_isa_opcode_t swa16_isa_opcode_from(swa16_word_t value)
 {
-    switch (value)
+    if (value > SWA16_ISA_OPCODE_END)
     {
-    case 0x0000: return SWA16_ISA_OPCODE_FLW;
-    case 0x0001: return SWA16_ISA_OPCODE_MOV;
-    case 0x0002: return SWA16_ISA_OPCODE_ADD;
-    case 0x0003: return SWA16_ISA_OPCODE_SUB;
-    case 0x0004: return SWA16_ISA_OPCODE_AND;
-    case 0x0005: return SWA16_ISA_OPCODE_IOR;
-    case 0x0006: return SWA16_ISA_OPCODE_XOR;
-    case 0x0007: return SWA16_ISA_OPCODE_SHL;
-    case 0x0008: return SWA16_ISA_OPCODE_SHR;
-    case 0x0009: return SWA16_ISA_OPCODE_SAR;
-    case 0x000A: return SWA16_ISA_OPCODE_CMP;
-    case 0x000B: return SWA16_ISA_OPCODE_CLL;
-    case 0x000C: return SWA16_ISA_OPCODE_JMPR;
-    case 0x000D: return SWA16_ISA_OPCODE_JMPA;
-    case 0x000E: return SWA16_ISA_OPCODE_LDD;
-    case 0x000F: return SWA16_ISA_OPCODE_STD;
-
-    case 0xFFFF: return SWA16_ISA_OPCODE_NONE;
-
-    default:     return SWA16_ISA_OPCODE_NONE;
+        return SWA16_ISA_OPCODE_NONE;
     }
+
+    return (swa16_isa_opcode_t)value;
 }
+
+
 
 const char* swa16_isa_opcode_to_name(swa16_isa_opcode_t opcode)
 {
@@ -68,6 +58,11 @@ const char* swa16_isa_opcode_to_name(swa16_isa_opcode_t opcode)
 
 swa16_isa_opcode_t swa16_isa_opcode_from_name(const char* name)
 {
+    if (name == NULL)
+    {
+        return SWA16_ISA_OPCODE_NONE;
+    }
+
     if (strcmp(name,  "FLW") == 0) return SWA16_ISA_OPCODE_FLW;
     if (strcmp(name,  "MOV") == 0) return SWA16_ISA_OPCODE_MOV;
     if (strcmp(name,  "ADD") == 0) return SWA16_ISA_OPCODE_ADD;

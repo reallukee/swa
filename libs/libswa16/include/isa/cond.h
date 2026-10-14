@@ -17,7 +17,9 @@
 #include <utils/export.h>
 #include <utils/macros.h>
 
+#include <types/addr.h>
 #include <types/binint.h>
+#include <types/flag.h>
 
 SWA16_NAMESPACE_BEGIN
 
@@ -25,7 +27,7 @@ SWA16_NAMESPACE_BEGIN
 #define SWA16_ISA_COND_END   0x0007
 #define SWA16_ISA_COND_SIZE  (SWA16_ISA_COND_END + 1)
 
-typedef enum swa16_isa_cond
+typedef enum swa16_isa_cond : swa16_word_t
 {
     SWA16_ISA_COND_ALWAYS            = 0x0000, // 0x0000 --- ALWAYS
     SWA16_ISA_COND_NOT_ALWAYS        = 0x0001, // 0x0001 --- NOT ALWAYS
@@ -39,7 +41,9 @@ typedef enum swa16_isa_cond
     SWA16_ISA_COND_NONE              = 0xFFFF, // 0xFFFF --- Fallback Value
 } swa16_isa_cond_t;
 
-LIBSWA16_API swa16_isa_cond_t swa16_isa_cond_from     (swa16_word_t value);
+LIBSWA16_API swa16_word_t     swa16_isa_cond_to  (swa16_isa_cond_t cond);
+LIBSWA16_API swa16_isa_cond_t swa16_isa_cond_from(swa16_word_t value);
+
 LIBSWA16_API const char*      swa16_isa_cond_to_name  (swa16_isa_cond_t cond);
 LIBSWA16_API swa16_isa_cond_t swa16_isa_cond_from_name(const char* name);
 
