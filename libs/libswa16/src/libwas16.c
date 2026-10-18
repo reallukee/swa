@@ -14,5 +14,3 @@
 
 const uint64_t LIBSWA16_VERSION     = 200;
 const uint64_t LIBSWA16_MIN_VERSION = 200;
-const uint64_t LIBSWA16_API_VERSION = 200;
-const uint64_t LIBSWA16_ISA_VERSION = 100;
