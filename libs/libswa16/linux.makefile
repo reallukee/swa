@@ -1,5 +1,7 @@
+# ***********************
 # libswa16 Linux Makefile
-#   v2.0
+# ***********************
+#   v2.1
 
 TARGET_NAME ?= libswa16
 TARGET_EXT  ?= .so
@@ -11,6 +13,13 @@ INCLUDE_DIR ?= include
 CC      = gcc
 CFLAGS  = -std=c23 -Wall -Wextra -fPIC -I$(SRC_DIR) -I$(INCLUDE_DIR)
 LDFLAGS = -shared
+
+ifeq ($(debug),1)
+CFLAGS += -Werror -Wno-error=unused \
+          -Wmissing-prototypes \
+          -Wstrict-prototypes \
+          -Wmissing-declarations
+endif
 
 SRC     = $(shell find $(SRC_DIR) -name '*.c')
 OBJ     = $(patsubst $(SRC_DIR)/%.c, $(OBJ_DIR)/%.o, $(SRC))
