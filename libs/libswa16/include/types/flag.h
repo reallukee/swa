@@ -27,10 +27,10 @@ SWA16_NAMESPACE_BEGIN
 
 typedef enum swa16_flag : swa16_word_t
 {
-    SWA16_FLAG_ASSERTED      = 0x0000, // 0x0000 --- ASSERTED
-    SWA16_FLAG_NOT_ASSERTED  = 0x0001, // 0x0001 --- NOT ASSERTED
+    SWA16_FLAG_LO   = 0x0000, // 0x0000 --- LO
+    SWA16_FLAG_HI   = 0x0001, // 0x0001 --- HI
 
-    SWA16_FLAG_NONE          = 0xFFFF, // 0xFFFF --- Fallback Value
+    SWA16_FLAG_NONE = 0xFFFF, // 0xFFFF --- Fallback Value
 } swa16_flag_t;
 
 LIBSWA16_API swa16_word_t swa16_flag_to  (swa16_flag_t flag);

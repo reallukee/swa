@@ -33,12 +33,12 @@ const char* swa16_flag_to_name(swa16_flag_t flag)
 {
     switch (flag)
     {
-    case SWA16_FLAG_ASSERTED:     return "ASSERTED";
-    case SWA16_FLAG_NOT_ASSERTED: return "NOT ASSERTED";
+    case SWA16_FLAG_LO:   return "LO";
+    case SWA16_FLAG_HI:   return "HI";
 
-    case SWA16_FLAG_NONE:         return "NONE";
+    case SWA16_FLAG_NONE: return "NONE";
 
-    default:                      return "NONE";
+    default:              return "NONE";
     }
 }
 
@@ -49,10 +49,10 @@ swa16_flag_t swa16_flag_from_name(const char* name)
         return SWA16_FLAG_NONE;
     }
 
-    if (strcmp(name,     "ASSERTED") == 0) return SWA16_FLAG_ASSERTED;
-    if (strcmp(name, "NOT ASSERTED") == 0) return SWA16_FLAG_NOT_ASSERTED;
+    if (strcmp(name,   "LO") == 0) return SWA16_FLAG_LO;
+    if (strcmp(name,   "HI") == 0) return SWA16_FLAG_HI;
 
-    if (strcmp(name,         "NONE") == 0) return SWA16_FLAG_NONE;
+    if (strcmp(name, "NONE") == 0) return SWA16_FLAG_NONE;
 
     return SWA16_FLAG_NONE;
 }
