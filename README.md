@@ -1,14 +1,22 @@
 <div align="center">
 
-<img src="./assets/swa.png" />
+<br />
+
+<img src="./assets/swa.png" alt="swa" /> *2.0*
+
+<br />
 
 </div>
 
 # SWA<br /> Stupid Wild Architecture
 
-👾 SWA Architecture: Library, Emulator, and Assembler
+👾 SWA Architecture: Core Library, Emulator, and Assembler
 
 ![License](https://img.shields.io/github/license/reallukee/swa)
+
+* [`libswa16`](./libs/libswa16/)
+* [`swaemu16`](./emus/swaemu16/)
+* [`swaasm16`](./asms/swaasm16/)
 
 
 
