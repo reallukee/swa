@@ -52,7 +52,7 @@ bool swa16_cpu_flgs_get(
     swa16_cpu_flgs_t   flg,
     swa16_flag_t*      out)
 {
-    if (cpu == NULL)
+    if (cpu == NULL || out == NULL)
     {
         return false;
     }

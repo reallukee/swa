@@ -10,7 +10,7 @@
 //  https://github.com/reallukee/swa
 //
 
-#ifndef SWA16_ISAINT_H
-#define SWA16_ISAINT_H
+#ifndef LIBSWA16_ISAINT_H
+#define LIBSWA16_ISAINT_H
 
-#endif // !SWA16_ISAINT_H
+#endif // !LIBSWA16_ISAINT_H
