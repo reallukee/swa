@@ -6,6 +6,8 @@
 
 # SWA<br /> Stupid Wild Architecture
 
+👾 SWA Architecture: Library, Emulator, and Assembler
+
 ![License](https://img.shields.io/github/license/reallukee/swa)
 
 
