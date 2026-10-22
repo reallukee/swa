@@ -48,6 +48,7 @@ typedef enum swa16_cpu_regs : swa16_word_t
     SWA16_CPU_REGS_FP   = 0x000E, // 0x000E --- Frame Pointer
     SWA16_CPU_REGS_SP   = 0x000F, // 0x000F --- Stack Pointer
 
+    SWA16_CPU_REGS_NULL = 0xFFFE, // 0xFFFE --- Null
     SWA16_CPU_REGS_NONE = 0xFFFF, // 0xFFFF --- Fallback Value
 } swa16_cpu_regs_t;
 
@@ -61,18 +62,20 @@ LIBSWA16_API bool swa16_cpu_regs_set  (swa16_cpu_t* cpu, swa16_cpu_regs_t reg, s
 LIBSWA16_API bool swa16_cpu_regs_setlo(swa16_cpu_t* cpu, swa16_cpu_regs_t reg, swa16_byte_t in);
 LIBSWA16_API bool swa16_cpu_regs_sethi(swa16_cpu_t* cpu, swa16_cpu_regs_t reg, swa16_byte_t in);
 
+LIBSWA16_API bool swa16_cpu_regs_isGp  (swa16_cpu_regs_t reg);
+LIBSWA16_API bool swa16_cpu_regs_isNull(swa16_cpu_regs_t reg);
+LIBSWA16_API bool swa16_cpu_regs_isNone(swa16_cpu_regs_t reg);
+
 LIBSWA16_API swa16_word_t     swa16_cpu_regs_to  (swa16_cpu_regs_t reg);
 LIBSWA16_API swa16_cpu_regs_t swa16_cpu_regs_from(swa16_word_t value);
 
 LIBSWA16_API const char*      swa16_cpu_regs_to_name  (swa16_cpu_regs_t reg);
 LIBSWA16_API swa16_cpu_regs_t swa16_cpu_regs_from_name(const char* name);
 
-LIBSWA16_API bool swa16_cpu_regs_print(
-    const swa16_cpu_t* cpu);
+LIBSWA16_API bool swa16_cpu_regs_print(const swa16_cpu_t* cpu);
 
-LIBSWA16_API bool swa16_cpu_regs_exprint(
-    const swa16_cpu_t* cpu,
-    void               (*callback)(swa16_cpu_regs_t reg, swa16_word_t value));
+LIBSWA16_API bool swa16_cpu_regs_exprint(const swa16_cpu_t* cpu,
+                                         void               (*callback)(swa16_cpu_regs_t reg, swa16_word_t value));
 
 LIBSWA16_API bool swa16_cpu_regs_load  (swa16_cpu_t* cpu, const char* path);
 LIBSWA16_API bool swa16_cpu_regs_unload(const swa16_cpu_t* cpu, const char* path);

@@ -14,9 +14,8 @@
 
 #include "isaint.h"
 
-bool swa16_ctx_evaluate(
-    const swa16_cpu_t*      cpu,
-    const swa16_isa_inst_t* inst)
+bool swa16_ctx_evaluate(const swa16_cpu_t*      cpu,
+                        const swa16_isa_inst_t* inst)
 {
     if (cpu == NULL || inst == NULL)
     {
@@ -80,9 +79,8 @@ swa16_flag_t swa16_ctx_compute_overflow(swa16_long_t result)
 
 
 
-bool swa16_ctx_update(
-    swa16_cpu_t* cpu,
-    swa16_long_t result)
+bool swa16_ctx_update(swa16_cpu_t* cpu,
+                      swa16_long_t result)
 {
     if (cpu == NULL)
     {

@@ -55,16 +55,14 @@ LIBSWA16_API swa16_addr_t swa16_mem_wrds_from(swa16_word_t value);
 LIBSWA16_API const char*  swa16_mem_wrds_to_name  (swa16_addr_t wrds);
 LIBSWA16_API swa16_addr_t swa16_mem_wrds_from_name(const char* name);
 
-LIBSWA16_API bool swa16_mem_wrds_print(
-    const swa16_mem_t* mem,
-    swa16_addr_t       start,
-    swa16_addr_t       count);
+LIBSWA16_API bool swa16_mem_wrds_print(const swa16_mem_t* mem,
+                                       swa16_addr_t       start,
+                                       swa16_addr_t       count);
 
-LIBSWA16_API bool swa16_mem_wrds_exprint(
-    const swa16_mem_t* mem,
-    swa16_addr_t       start,
-    swa16_addr_t       count,
-    void               (*callback)(swa16_addr_t wrds, swa16_word_t value));
+LIBSWA16_API bool swa16_mem_wrds_exprint(const swa16_mem_t* mem,
+                                         swa16_addr_t       start,
+                                         swa16_addr_t       count,
+                                         void               (*callback)(swa16_addr_t wrds, swa16_word_t value));
 
 LIBSWA16_API bool swa16_mem_wrds_load  (swa16_mem_t* mem, const char* path);
 LIBSWA16_API bool swa16_mem_wrds_unload(const swa16_mem_t* mem, const char* path);
