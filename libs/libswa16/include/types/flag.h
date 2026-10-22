@@ -19,7 +19,7 @@
 
 #include <types/binint.h>
 
-SWA16_NAMESPACE_BEGIN
+LIBSWA16_NAMESPACE_BEGIN
 
 #define SWA16_FLAG_START 0x0000
 #define SWA16_FLAG_END   0x0001
@@ -39,6 +39,6 @@ LIBSWA16_API swa16_flag_t swa16_flag_from(swa16_word_t value);
 LIBSWA16_API const char*  swa16_flag_to_name  (swa16_flag_t flag);
 LIBSWA16_API swa16_flag_t swa16_flag_from_name(const char* name);
 
-SWA16_NAMESPACE_END
+LIBSWA16_NAMESPACE_END
 
 #endif // !LIBSWA16_TYPES_FLAG_H

@@ -23,7 +23,7 @@
 
 #include <mem/wrds.h>
 
-SWA16_NAMESPACE_BEGIN
+LIBSWA16_NAMESPACE_BEGIN
 
 typedef struct swa16_mem
 {
@@ -34,6 +34,6 @@ typedef struct swa16_mem
     swa16_word_t wrds[SWA16_MEM_WRDS_SIZE];
 } swa16_mem_t;
 
-SWA16_NAMESPACE_END
+LIBSWA16_NAMESPACE_END
 
 #endif // !LIBSWA16_MEMINT_H

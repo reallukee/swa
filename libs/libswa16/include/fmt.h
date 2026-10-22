@@ -25,7 +25,7 @@
 #include <cpu.h>
 #include <mem.h>
 
-SWA16_NAMESPACE_BEGIN
+LIBSWA16_NAMESPACE_BEGIN
 
 typedef struct swa16_fmt_argn
 {
@@ -67,6 +67,6 @@ LIBSWA16_API bool swa16_fmt_inst_to_argtm(const swa16_cpu_t*      cpu,
                                           const swa16_isa_inst_t* inst,
                                           swa16_fmt_argtm_t*      fmt_argtm);
 
-SWA16_NAMESPACE_END
+LIBSWA16_NAMESPACE_END
 
 #endif // !LIBSWA16_FMT_H

@@ -21,7 +21,7 @@
 #include <types/binint.h>
 #include <types/flag.h>
 
-SWA16_NAMESPACE_BEGIN
+LIBSWA16_NAMESPACE_BEGIN
 
 #define SWA16_ISA_COND_START 0x0000
 #define SWA16_ISA_COND_END   0x0007
@@ -47,6 +47,6 @@ LIBSWA16_API swa16_isa_cond_t swa16_isa_cond_from(swa16_word_t value);
 LIBSWA16_API const char*      swa16_isa_cond_to_name  (swa16_isa_cond_t cond);
 LIBSWA16_API swa16_isa_cond_t swa16_isa_cond_from_name(const char* name);
 
-SWA16_NAMESPACE_END
+LIBSWA16_NAMESPACE_END
 
 #endif // !LIBSWA16_ISA_COND_H
