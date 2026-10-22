@@ -19,7 +19,7 @@
 
 #include <types/binint.h>
 
-SWA16_NAMESPACE_BEGIN
+LIBSWA16_NAMESPACE_BEGIN
 
 #define SWA16_ADDR_START 0x0001
 #define SWA16_ADDR_END   0xFFFE
@@ -37,6 +37,6 @@ LIBSWA16_API bool swa16_addr_isGp  (swa16_addr_t addr);
 LIBSWA16_API bool swa16_addr_isNull(swa16_addr_t addr);
 LIBSWA16_API bool swa16_addr_isNone(swa16_addr_t addr);
 
-SWA16_NAMESPACE_END
+LIBSWA16_NAMESPACE_END
 
 #endif // !LIBSWA16_TYPES_ADDR_H

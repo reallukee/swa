@@ -21,7 +21,7 @@
 #include <types/binint.h>
 #include <types/flag.h>
 
-SWA16_NAMESPACE_BEGIN
+LIBSWA16_NAMESPACE_BEGIN
 
 #define SWA16_ISA_SIGN_START 0x0000
 #define SWA16_ISA_SIGN_END   0x0007
@@ -49,6 +49,6 @@ LIBSWA16_API swa16_isa_sign_t swa16_isa_sign_from(swa16_word_t value);
 LIBSWA16_API const char*      swa16_isa_sign_to_name  (swa16_isa_sign_t sign);
 LIBSWA16_API swa16_isa_sign_t swa16_isa_sign_from_name(const char* name);
 
-SWA16_NAMESPACE_END
+LIBSWA16_NAMESPACE_END
 
 #endif // !LIBSWA16_ISA_SIGN_H

@@ -21,7 +21,7 @@
 #include <types/binint.h>
 #include <types/flag.h>
 
-SWA16_NAMESPACE_BEGIN
+LIBSWA16_NAMESPACE_BEGIN
 
 typedef struct swa16_isa_inst
 {
@@ -41,6 +41,6 @@ typedef struct swa16_isa_inst
     };
 } swa16_isa_inst_t;
 
-SWA16_NAMESPACE_END
+LIBSWA16_NAMESPACE_END
 
 #endif // !LIBSWA16_ISA_INST_H

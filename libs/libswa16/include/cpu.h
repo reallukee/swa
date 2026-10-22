@@ -25,7 +25,7 @@
 #include <cpu/pc.h>
 #include <cpu/flgs.h>
 
-SWA16_NAMESPACE_BEGIN
+LIBSWA16_NAMESPACE_BEGIN
 
 typedef struct swa16_cpu swa16_cpu_t;
 
@@ -35,6 +35,6 @@ LIBSWA16_API void         swa16_cpu_free (swa16_cpu_t* cpu);
 LIBSWA16_API bool swa16_cpu_init  (swa16_cpu_t* cpu);
 LIBSWA16_API bool swa16_cpu_isInit(const swa16_cpu_t* cpu);
 
-SWA16_NAMESPACE_END
+LIBSWA16_NAMESPACE_END
 
 #endif // !LIBSWA16_CPU_H

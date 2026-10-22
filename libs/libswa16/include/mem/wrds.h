@@ -21,7 +21,7 @@
 #include <types/binint.h>
 #include <types/flag.h>
 
-SWA16_NAMESPACE_BEGIN
+LIBSWA16_NAMESPACE_BEGIN
 
 typedef struct swa16_mem swa16_mem_t;
 
@@ -67,6 +67,6 @@ LIBSWA16_API bool swa16_mem_wrds_exprint(const swa16_mem_t* mem,
 LIBSWA16_API bool swa16_mem_wrds_load  (swa16_mem_t* mem, const char* path);
 LIBSWA16_API bool swa16_mem_wrds_unload(const swa16_mem_t* mem, const char* path);
 
-SWA16_NAMESPACE_END
+LIBSWA16_NAMESPACE_END
 
 #endif // !LIBSWA16_MEM_WRDS_H

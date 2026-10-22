@@ -23,7 +23,7 @@
 
 #include <mem/wrds.h>
 
-SWA16_NAMESPACE_BEGIN
+LIBSWA16_NAMESPACE_BEGIN
 
 typedef struct swa16_mem swa16_mem_t;
 
@@ -37,6 +37,6 @@ LIBSWA16_API void         swa16_mem_free (swa16_mem_t* mem);
 LIBSWA16_API bool swa16_mem_init  (swa16_mem_t* mem);
 LIBSWA16_API bool swa16_mem_isInit(const swa16_mem_t* mem);
 
-SWA16_NAMESPACE_END
+LIBSWA16_NAMESPACE_END
 
 #endif // !LIBSWA16_MEM_H

@@ -17,7 +17,7 @@
 #include <utils/export.h>
 #include <utils/macros.h>
 
-SWA16_NAMESPACE_BEGIN
+LIBSWA16_NAMESPACE_BEGIN
 
 typedef uint8_t swa16_byte_t;
 typedef int8_t  swa16_sbyte_t;
@@ -58,6 +58,6 @@ LIBSWA16_API swa16_word_t swa16_binint_glhi(swa16_long_t longv);
 LIBSWA16_API swa16_long_t swa16_binint_sllo(swa16_long_t longv, swa16_word_t wordv);
 LIBSWA16_API swa16_long_t swa16_binint_slhi(swa16_long_t longv, swa16_word_t wordv);
 
-SWA16_NAMESPACE_END
+LIBSWA16_NAMESPACE_END
 
 #endif // !LIBSWA16_TYPES_BININT_H

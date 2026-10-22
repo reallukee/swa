@@ -21,7 +21,7 @@
 #include <types/binint.h>
 #include <types/flag.h>
 
-SWA16_NAMESPACE_BEGIN
+LIBSWA16_NAMESPACE_BEGIN
 
 typedef struct swa16_cpu swa16_cpu_t;
 
@@ -80,6 +80,6 @@ LIBSWA16_API bool swa16_cpu_regs_exprint(const swa16_cpu_t* cpu,
 LIBSWA16_API bool swa16_cpu_regs_load  (swa16_cpu_t* cpu, const char* path);
 LIBSWA16_API bool swa16_cpu_regs_unload(const swa16_cpu_t* cpu, const char* path);
 
-SWA16_NAMESPACE_END
+LIBSWA16_NAMESPACE_END
 
 #endif // !LIBSWA16_CPU_REGS_H

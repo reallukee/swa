@@ -25,7 +25,7 @@
 #include <cpu/pc.h>
 #include <cpu/flgs.h>
 
-SWA16_NAMESPACE_BEGIN
+LIBSWA16_NAMESPACE_BEGIN
 
 typedef struct swa16_cpu
 {
@@ -40,6 +40,6 @@ typedef struct swa16_cpu
     swa16_word_t flgs[SWA16_CPU_FLGS_SIZE];
 } swa16_cpu_t;
 
-SWA16_NAMESPACE_END
+LIBSWA16_NAMESPACE_END
 
 #endif // !LIBSWA16_CPUINT_H
