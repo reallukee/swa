@@ -3,7 +3,8 @@
     {
       "name": "macOS (Clang C23)",
       "includePath": [
-        "${workspaceFolder}/**"
+        "${workspaceFolder}/**/include",
+        "${workspaceFolder}/**/src"
       ],
       "defines": [
         "DEBUG",
@@ -23,7 +24,8 @@
     {
       "name": "Linux (GCC C23)",
       "includePath": [
-        "${workspaceFolder}/**"
+        "${workspaceFolder}/**/include",
+        "${workspaceFolder}/**/src"
       ],
       "defines": [
         "DEBUG",
