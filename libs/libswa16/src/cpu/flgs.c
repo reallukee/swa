@@ -151,6 +151,23 @@ bool swa16_cpu_flgs_tohi(
 
 
 
+bool swa16_cpu_flgs_isGp(swa16_cpu_flgs_t flg)
+{
+    return swa16_cpu_flgs_isNull(flg) && swa16_cpu_flgs_isNone(flg);
+}
+
+bool swa16_cpu_flgs_isNull(swa16_cpu_flgs_t flg)
+{
+    return flg == SWA16_CPU_FLGS_NULL;
+}
+
+bool swa16_cpu_flgs_isNone(swa16_cpu_flgs_t flg)
+{
+    return flg == SWA16_CPU_FLGS_NONE;
+}
+
+
+
 swa16_word_t swa16_cpu_flgs_to(swa16_cpu_flgs_t flg)
 {
     return (swa16_word_t)flg;
@@ -214,9 +231,8 @@ bool swa16_cpu_flgs_print(
     );
 }
 
-bool swa16_cpu_flgs_exprint(
-    const swa16_cpu_t* cpu,
-    void               (*callback)(swa16_cpu_flgs_t flg, swa16_flag_t value))
+bool swa16_cpu_flgs_exprint(const swa16_cpu_t* cpu,
+                            void               (*callback)(swa16_cpu_flgs_t flg, swa16_flag_t value))
 {
     if (cpu == NULL || callback == NULL)
     {

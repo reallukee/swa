@@ -34,24 +34,18 @@ typedef struct swa16_fmt_argn
     swa16_word_t     arg1;
 } swa16_fmt_argn_t;
 
-LIBSWA16_API bool swa16_fmt_inst_to_argn(
-    const swa16_cpu_t*      cpu,
-    const swa16_isa_inst_t* inst,
-    swa16_fmt_argn_t*       fmt_argn);
-
-
+LIBSWA16_API bool swa16_fmt_inst_to_argn(const swa16_cpu_t*      cpu,
+                                         const swa16_isa_inst_t* inst,
+                                         swa16_fmt_argn_t*       fmt_argn);
 
 typedef struct swa16_fmt_argf
 {
     swa16_word_t argf;
 } swa16_fmt_argf_t;
 
-LIBSWA16_API bool swa16_fmt_inst_to_argf(
-    const swa16_cpu_t*      cpu,
-    const swa16_isa_inst_t* inst,
-    swa16_fmt_argf_t*       fmt_argf);
-
-
+LIBSWA16_API bool swa16_fmt_inst_to_argf(const swa16_cpu_t*      cpu,
+                                         const swa16_isa_inst_t* inst,
+                                         swa16_fmt_argf_t*       fmt_argf);
 
 typedef struct swa16_fmt_argfm
 {
@@ -59,12 +53,9 @@ typedef struct swa16_fmt_argfm
     swa16_word_t     srce;
 } swa16_fmt_argfm_t;
 
-LIBSWA16_API bool swa16_fmt_inst_to_argfm(
-    const swa16_cpu_t*      cpu,
-    const swa16_isa_inst_t* inst,
-    swa16_fmt_argfm_t*      fmt_argfm);
-
-
+LIBSWA16_API bool swa16_fmt_inst_to_argfm(const swa16_cpu_t*      cpu,
+                                          const swa16_isa_inst_t* inst,
+                                          swa16_fmt_argfm_t*      fmt_argfm);
 
 typedef struct swa16_fmt_argtm
 {
@@ -72,10 +63,9 @@ typedef struct swa16_fmt_argtm
     swa16_cpu_regs_t srce;
 } swa16_fmt_argtm_t;
 
-LIBSWA16_API bool swa16_fmt_inst_to_argtm(
-    const swa16_cpu_t*      cpu,
-    const swa16_isa_inst_t* inst,
-    swa16_fmt_argtm_t*      fmt_argtm);
+LIBSWA16_API bool swa16_fmt_inst_to_argtm(const swa16_cpu_t*      cpu,
+                                          const swa16_isa_inst_t* inst,
+                                          swa16_fmt_argtm_t*      fmt_argtm);
 
 SWA16_NAMESPACE_END
 

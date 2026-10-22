@@ -170,11 +170,11 @@ swa16_addr_t swa16_mem_wrds_from(swa16_word_t value)
 const char* swa16_mem_wrds_to_name(swa16_addr_t wrds)
 {
     char* wrds_str = calloc(
-        8, sizeof(char)
+        18, sizeof(char)
     );
 
     snprintf(
-        wrds_str, sizeof(wrds_str), "WRDS_ADDR_0x%04X", wrds
+        wrds_str, 18, "WRDS_ADDR_0x%04X", wrds
     );
 
     return wrds_str;
@@ -204,21 +204,19 @@ static void printex_callback(swa16_addr_t wrds, swa16_word_t value)
     printf("%d: %d\n", wrds, value);
 }
 
-bool swa16_mem_wrds_print(
-    const swa16_mem_t* mem,
-    swa16_addr_t       start,
-    swa16_addr_t       count)
+bool swa16_mem_wrds_print(const swa16_mem_t* mem,
+                          swa16_addr_t       start,
+                          swa16_addr_t       count)
 {
     return swa16_mem_wrds_exprint(
         mem, start, count, printex_callback
     );
 }
 
-bool swa16_mem_wrds_exprint(
-    const swa16_mem_t* mem,
-    swa16_addr_t       start,
-    swa16_addr_t       count,
-    void         (*callback)(swa16_addr_t wrds, swa16_word_t value))
+bool swa16_mem_wrds_exprint(const swa16_mem_t* mem,
+                            swa16_addr_t       start,
+                            swa16_addr_t       count,
+                            void               (*callback)(swa16_addr_t wrds, swa16_word_t value))
 {
     if (mem == NULL || callback == NULL)
     {

@@ -27,20 +27,16 @@
 
 SWA16_NAMESPACE_BEGIN
 
-LIBSWA16_API bool swa16_ctx_evaluate(
-    const swa16_cpu_t*      cpu,
-    const swa16_isa_inst_t* inst
-);
+LIBSWA16_API bool swa16_ctx_evaluate(const swa16_cpu_t*      cpu,
+                                     const swa16_isa_inst_t* inst);
 
 LIBSWA16_API swa16_flag_t swa16_ctx_compute_zero    (swa16_long_t result);
 LIBSWA16_API swa16_flag_t swa16_ctx_compute_borrow  (swa16_long_t result);
 LIBSWA16_API swa16_flag_t swa16_ctx_compute_negative(swa16_long_t result);
 LIBSWA16_API swa16_flag_t swa16_ctx_compute_overflow(swa16_long_t result);
 
-LIBSWA16_API bool swa16_ctx_update(
-    swa16_cpu_t* cpu,
-    swa16_long_t result
-);
+LIBSWA16_API bool swa16_ctx_update(swa16_cpu_t* cpu,
+                                   swa16_long_t result);
 
 SWA16_NAMESPACE_END
 

@@ -210,11 +210,11 @@ swa16_addr_t swa16_cpu_pc_from(swa16_word_t value)
 const char* swa16_cpu_pc_to_name(swa16_addr_t pc)
 {
     char* pc_str = calloc(
-        8, sizeof(char)
+        16, sizeof(char)
     );
 
     snprintf(
-        pc_str, sizeof(pc_str), "PC_ADDR_0x%04X", pc
+        pc_str, 16, "PC_ADDR_0x%04X", pc
     );
 
     return pc_str;
@@ -244,17 +244,15 @@ static void printex_callback(swa16_addr_t pc, swa16_word_t value)
     printf("%d: %d\n", pc, value);
 }
 
-bool swa16_cpu_pc_print(
-    const swa16_cpu_t* cpu)
+bool swa16_cpu_pc_print(const swa16_cpu_t* cpu)
 {
     return swa16_cpu_pc_exprint(
         cpu, printex_callback
     );
 }
 
-bool swa16_cpu_pc_exprint(
-    const swa16_cpu_t* cpu,
-    void               (*callback)(swa16_addr_t pc, swa16_word_t value))
+bool swa16_cpu_pc_exprint(const swa16_cpu_t* cpu,
+                          void               (*callback)(swa16_addr_t pc, swa16_word_t value))
 {
     if (cpu == NULL || callback == NULL)
     {

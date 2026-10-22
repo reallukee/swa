@@ -151,6 +151,23 @@ bool swa16_cpu_regs_sethi(
 
 
 
+bool swa16_cpu_regs_isGp(swa16_cpu_regs_t reg)
+{
+    return swa16_cpu_regs_isNull(reg) && swa16_cpu_regs_isNone(reg);
+}
+
+bool swa16_cpu_regs_isNull(swa16_cpu_regs_t reg)
+{
+    return reg == SWA16_CPU_REGS_NULL;
+}
+
+bool swa16_cpu_regs_isNone(swa16_cpu_regs_t reg)
+{
+    return reg == SWA16_CPU_REGS_NONE;
+}
+
+
+
 swa16_word_t swa16_cpu_regs_to(swa16_cpu_regs_t reg)
 {
     return (swa16_word_t)reg;
@@ -234,9 +251,8 @@ bool swa16_cpu_regs_print(
     );
 }
 
-bool swa16_cpu_regs_exprint(
-    const swa16_cpu_t* cpu,
-    void               (*callback)(swa16_cpu_regs_t reg, swa16_word_t value))
+bool swa16_cpu_regs_exprint(const swa16_cpu_t* cpu,
+                            void               (*callback)(swa16_cpu_regs_t reg, swa16_word_t value))
 {
     if (cpu == NULL || callback == NULL)
     {

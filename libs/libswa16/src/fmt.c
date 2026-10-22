@@ -27,7 +27,7 @@ bool swa16_fmt_inst_to_argn(const swa16_cpu_t*      cpu,
 
     swa16_word_t arg0 = 0;
 
-    if (dest == SWA16_CPU_REGS_NONE)
+    if (!swa16_cpu_regs_isGp(dest))
     {
         return false;
     }
@@ -45,7 +45,7 @@ bool swa16_fmt_inst_to_argn(const swa16_cpu_t*      cpu,
 
         swa16_word_t arg1 = 0;
 
-        if (reop == SWA16_CPU_REGS_NONE)
+        if (!swa16_cpu_regs_isGp(reop))
         {
             return false;
         }
@@ -75,8 +75,6 @@ bool swa16_fmt_inst_to_argn(const swa16_cpu_t*      cpu,
     return true;
 }
 
-
-
 bool swa16_fmt_inst_to_argf(const swa16_cpu_t*      cpu,
                             const swa16_isa_inst_t* inst,
                             swa16_fmt_argf_t*       fmt_argf)
@@ -92,7 +90,7 @@ bool swa16_fmt_inst_to_argf(const swa16_cpu_t*      cpu,
 
         swa16_word_t argf = 0;
 
-        if (reop == SWA16_CPU_REGS_NONE)
+        if (!swa16_cpu_regs_isGp(reop))
         {
             return false;
         }
@@ -118,8 +116,6 @@ bool swa16_fmt_inst_to_argf(const swa16_cpu_t*      cpu,
     return true;
 }
 
-
-
 bool swa16_fmt_inst_to_argfm(const swa16_cpu_t*      cpu,
                              const swa16_isa_inst_t* inst,
                              swa16_fmt_argfm_t*      fmt_argfm)
@@ -133,7 +129,7 @@ bool swa16_fmt_inst_to_argfm(const swa16_cpu_t*      cpu,
 
     swa16_addr_t addr = 0;
 
-    if (dest == SWA16_CPU_REGS_NONE)
+    if (!swa16_cpu_regs_isGp(dest))
     {
         return false;
     }
@@ -142,7 +138,7 @@ bool swa16_fmt_inst_to_argfm(const swa16_cpu_t*      cpu,
 
     swa16_cpu_regs_t srce = swa16_cpu_regs_from(addr);
 
-    if (srce == SWA16_CPU_REGS_NONE)
+    if (!swa16_cpu_regs_isGp(srce))
     {
         return false;
     }
@@ -158,8 +154,6 @@ bool swa16_fmt_inst_to_argfm(const swa16_cpu_t*      cpu,
     return true;
 }
 
-
-
 bool swa16_fmt_inst_to_argtm(const swa16_cpu_t*      cpu,
                              const swa16_isa_inst_t* inst,
                              swa16_fmt_argtm_t*      fmt_argtm)
@@ -173,7 +167,7 @@ bool swa16_fmt_inst_to_argtm(const swa16_cpu_t*      cpu,
 
     swa16_addr_t addr = 0;
 
-    if (srce == SWA16_CPU_REGS_NONE)
+    if (!swa16_cpu_regs_isGp(srce))
     {
         return false;
     }
@@ -182,7 +176,7 @@ bool swa16_fmt_inst_to_argtm(const swa16_cpu_t*      cpu,
 
     swa16_cpu_regs_t dest = swa16_cpu_regs_from(addr);
 
-    if (dest == SWA16_CPU_REGS_NONE)
+    if (!swa16_cpu_regs_isGp(dest))
     {
         return false;
     }
