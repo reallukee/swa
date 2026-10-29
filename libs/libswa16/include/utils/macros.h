@@ -13,6 +13,8 @@
 #ifndef LIBSWA16_UTILS_MACROS_H
 #define LIBSWA16_UTILS_MACROS_H
 
+// #define LIBSWA16_EXPERIMENTAL
+
 #ifdef __cplusplus
     #define LIBSWA16_NAMESPACE_BEGIN namespace libswa16 {
     #define LIBSWA16_NAMESPACE_END   }
