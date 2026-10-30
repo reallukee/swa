@@ -14,8 +14,9 @@
 
 #include "macint.h"
 
-static swa16_isa_sign_t swa16_isa_insts_alo(const swa16_mac_t*      mac,
-                                            const swa16_isa_inst_t* inst)
+static swa16_isa_sign_t swa16_insts_alo(
+    const swa16_mac_t*      mac,
+    const swa16_isa_inst_t* inst)
 {
     swa16_fmt_argn_t fmt_argn;
 
@@ -85,50 +86,58 @@ static swa16_isa_sign_t swa16_isa_insts_alo(const swa16_mac_t*      mac,
     return SWA16_ISA_SIGN_NEXT;
 }
 
-swa16_isa_sign_t swa16_isa_insts_add(const swa16_mac_t*      mac,
-                                     const swa16_isa_inst_t* inst)
+swa16_isa_sign_t swa16_insts_add(
+    const swa16_mac_t*      mac,
+    const swa16_isa_inst_t* inst)
 {
-    return swa16_isa_insts_alo(mac, inst);
+    return swa16_insts_alo(mac, inst);
 }
 
-swa16_isa_sign_t swa16_isa_insts_sub(const swa16_mac_t*      mac,
-                                     const swa16_isa_inst_t* inst)
+swa16_isa_sign_t swa16_insts_sub(
+    const swa16_mac_t*      mac,
+    const swa16_isa_inst_t* inst)
 {
-    return swa16_isa_insts_alo(mac, inst);
+    return swa16_insts_alo(mac, inst);
 }
 
-swa16_isa_sign_t swa16_isa_insts_and(const swa16_mac_t*      mac,
-                                     const swa16_isa_inst_t* inst)
+swa16_isa_sign_t swa16_insts_and(
+    const swa16_mac_t*      mac,
+    const swa16_isa_inst_t* inst)
 {
-    return swa16_isa_insts_alo(mac, inst);
+    return swa16_insts_alo(mac, inst);
 }
 
-swa16_isa_sign_t swa16_isa_insts_ior(const swa16_mac_t*      mac,
-                                     const swa16_isa_inst_t* inst)
+swa16_isa_sign_t swa16_insts_ior(
+    const swa16_mac_t*      mac,
+    const swa16_isa_inst_t* inst)
 {
-    return swa16_isa_insts_alo(mac, inst);
+    return swa16_insts_alo(mac, inst);
 }
 
-swa16_isa_sign_t swa16_isa_insts_xor(const swa16_mac_t*      mac,
-                                     const swa16_isa_inst_t* inst)
+swa16_isa_sign_t swa16_insts_xor(
+    const swa16_mac_t*      mac,
+    const swa16_isa_inst_t* inst)
 {
-    return swa16_isa_insts_alo(mac, inst);
+    return swa16_insts_alo(mac, inst);
 }
 
-swa16_isa_sign_t swa16_isa_insts_shl(const swa16_mac_t*      mac,
-                                     const swa16_isa_inst_t* inst)
+swa16_isa_sign_t swa16_insts_shl(
+    const swa16_mac_t*      mac,
+    const swa16_isa_inst_t* inst)
 {
-    return swa16_isa_insts_alo(mac, inst);
+    return swa16_insts_alo(mac, inst);
 }
 
-swa16_isa_sign_t swa16_isa_insts_shr(const swa16_mac_t*      mac,
-                                     const swa16_isa_inst_t* inst)
+swa16_isa_sign_t swa16_insts_shr(
+    const swa16_mac_t*      mac,
+    const swa16_isa_inst_t* inst)
 {
-    return swa16_isa_insts_alo(mac, inst);
+    return swa16_insts_alo(mac, inst);
 }
 
-swa16_isa_sign_t swa16_isa_insts_sar(const swa16_mac_t*      mac,
-                                     const swa16_isa_inst_t* inst)
+swa16_isa_sign_t swa16_insts_sar(
+    const swa16_mac_t*      mac,
+    const swa16_isa_inst_t* inst)
 {
-    return swa16_isa_insts_alo(mac, inst);
+    return swa16_insts_alo(mac, inst);
 }

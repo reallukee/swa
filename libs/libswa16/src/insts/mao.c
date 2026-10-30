@@ -14,11 +14,12 @@
 
 #include "macint.h"
 
-static swa16_isa_sign_t swa16_isa_insts_ld(const swa16_mac_t*      mac,
-                                           const swa16_isa_inst_t* inst,
-                                           swa16_cpu_regs_t        dest,
-                                           swa16_word_t            srce,
-                                           swa16_word_t*           result)
+static swa16_isa_sign_t swa16_insts_ld(
+    const swa16_mac_t*      mac,
+    const swa16_isa_inst_t* inst,
+    swa16_cpu_regs_t        dest,
+    swa16_word_t            srce,
+    swa16_word_t*           result)
 {
     switch (inst->mode)
     {
@@ -55,11 +56,12 @@ static swa16_isa_sign_t swa16_isa_insts_ld(const swa16_mac_t*      mac,
     return SWA16_ISA_SIGN_OK;
 }
 
-static swa16_isa_sign_t swa16_isa_insts_sd(const swa16_mac_t*      mac,
-                                           const swa16_isa_inst_t* inst,
-                                           swa16_word_t            dest,
-                                           swa16_cpu_regs_t        srce,
-                                           swa16_word_t*           result)
+static swa16_isa_sign_t swa16_insts_sd(
+    const swa16_mac_t*      mac,
+    const swa16_isa_inst_t* inst,
+    swa16_word_t            dest,
+    swa16_cpu_regs_t        srce,
+    swa16_word_t*           result)
 {
     switch (inst->mode)
     {
@@ -96,10 +98,11 @@ static swa16_isa_sign_t swa16_isa_insts_sd(const swa16_mac_t*      mac,
     return SWA16_ISA_SIGN_OK;
 }
 
-static swa16_isa_sign_t swa16_isa_insts_mao(const swa16_mac_t*      mac,
-                                            const swa16_isa_inst_t* inst,
-                                            void*                   dest,
-                                            void*                   srce)
+static swa16_isa_sign_t swa16_insts_mao(
+    const swa16_mac_t*      mac,
+    const swa16_isa_inst_t* inst,
+    void*                   dest,
+    void*                   srce)
 {
     swa16_flag_t evaluate_result;
 
@@ -122,7 +125,7 @@ static swa16_isa_sign_t swa16_isa_insts_mao(const swa16_mac_t*      mac,
         switch (inst->opcode)
         {
         case SWA16_ISA_OPCODE_LDD:
-            if (swa16_isa_insts_ld(
+            if (swa16_insts_ld(
                     mac, inst, *(swa16_cpu_regs_t*)dest, *(swa16_word_t*)srce, &result
                ) == SWA16_ISA_SIGN_CRITICAL)
             {
@@ -130,7 +133,7 @@ static swa16_isa_sign_t swa16_isa_insts_mao(const swa16_mac_t*      mac,
             }
 
         case SWA16_ISA_OPCODE_STD:
-            if (swa16_isa_insts_sd(
+            if (swa16_insts_sd(
                     mac, inst, *(swa16_word_t*)dest, *(swa16_cpu_regs_t*)srce, &result
                ) == SWA16_ISA_SIGN_CRITICAL)
             {
@@ -165,8 +168,9 @@ static swa16_isa_sign_t swa16_isa_insts_mao(const swa16_mac_t*      mac,
     return SWA16_ISA_SIGN_NEXT;
 }
 
-swa16_isa_sign_t swa16_isa_insts_ldd(const swa16_mac_t*      mac,
-                                     const swa16_isa_inst_t* inst)
+swa16_isa_sign_t swa16_insts_ldd(
+    const swa16_mac_t*      mac,
+    const swa16_isa_inst_t* inst)
 {
     swa16_fmt_argfm_t fmt_argfm;
 
@@ -179,7 +183,7 @@ swa16_isa_sign_t swa16_isa_insts_ldd(const swa16_mac_t*      mac,
     swa16_word_t     srce = fmt_argfm.srce;
 
 #ifdef LIBSWA16_EXPERIMENTAL
-    return swa16_isa_insts_mao(mac, inst, &dest, &srce);
+    return swa16_insts_mao(mac, inst, &dest, &srce);
 #endif
 
     swa16_flag_t evaluate_result;
@@ -200,7 +204,7 @@ swa16_isa_sign_t swa16_isa_insts_ldd(const swa16_mac_t*      mac,
 
     if (execute)
     {
-        if (swa16_isa_insts_ld(mac, inst, dest, srce, &result) == SWA16_ISA_SIGN_CRITICAL)
+        if (swa16_insts_ld(mac, inst, dest, srce, &result) == SWA16_ISA_SIGN_CRITICAL)
         {
             return SWA16_ISA_SIGN_CRITICAL;
         }
@@ -223,8 +227,9 @@ swa16_isa_sign_t swa16_isa_insts_ldd(const swa16_mac_t*      mac,
     return SWA16_ISA_SIGN_NEXT;
 }
 
-swa16_isa_sign_t swa16_isa_insts_std(const swa16_mac_t*      mac,
-                                     const swa16_isa_inst_t* inst)
+swa16_isa_sign_t swa16_insts_std(
+    const swa16_mac_t*      mac,
+    const swa16_isa_inst_t* inst)
 {
     swa16_fmt_argtm_t fmt_argtm;
 
@@ -237,7 +242,7 @@ swa16_isa_sign_t swa16_isa_insts_std(const swa16_mac_t*      mac,
     swa16_cpu_regs_t srce = fmt_argtm.srce;
 
 #ifdef LIBSWA16_EXPERIMENTAL
-    return swa16_isa_insts_mao(mac, inst, &dest, &srce);
+    return swa16_insts_mao(mac, inst, &dest, &srce);
 #endif
 
     swa16_flag_t evaluate_result;
@@ -258,7 +263,7 @@ swa16_isa_sign_t swa16_isa_insts_std(const swa16_mac_t*      mac,
 
     if (execute)
     {
-        if (swa16_isa_insts_sd(mac, inst, dest, srce, &result) == SWA16_ISA_SIGN_CRITICAL)
+        if (swa16_insts_sd(mac, inst, dest, srce, &result) == SWA16_ISA_SIGN_CRITICAL)
         {
             return SWA16_ISA_SIGN_CRITICAL;
         }

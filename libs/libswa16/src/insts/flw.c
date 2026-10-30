@@ -14,8 +14,9 @@
 
 #include "macint.h"
 
-swa16_isa_sign_t swa16_isa_insts_flw(const swa16_mac_t*      mac,
-                                     const swa16_isa_inst_t* inst)
+swa16_isa_sign_t swa16_insts_flw(
+    const swa16_mac_t*      mac,
+    const swa16_isa_inst_t* inst)
 {
     swa16_fmt_argf_t fmt_argf;
 
