@@ -251,8 +251,9 @@ bool swa16_cpu_regs_print(
     );
 }
 
-bool swa16_cpu_regs_exprint(const swa16_cpu_t* cpu,
-                            void               (*callback)(swa16_cpu_regs_t reg, swa16_word_t value))
+bool swa16_cpu_regs_exprint(
+    const swa16_cpu_t* cpu,
+    void  (*callback)(swa16_cpu_regs_t reg, swa16_word_t value))
 {
     if (cpu == NULL || callback == NULL)
     {

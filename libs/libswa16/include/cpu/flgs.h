@@ -64,8 +64,9 @@ LIBSWA16_API swa16_cpu_flgs_t swa16_cpu_flgs_from_name(const char* name);
 
 LIBSWA16_API bool swa16_cpu_flgs_print(const swa16_cpu_t* cpu);
 
-LIBSWA16_API bool swa16_cpu_flgs_exprint(const swa16_cpu_t* cpu,
-                                         void               (*callback)(swa16_cpu_flgs_t flg, swa16_flag_t value));
+LIBSWA16_API bool swa16_cpu_flgs_exprint(
+    const swa16_cpu_t* cpu,
+    void  (*callback)(swa16_cpu_flgs_t flg, swa16_flag_t value));
 
 LIBSWA16_API bool swa16_cpu_flgs_load  (swa16_cpu_t* cpu, const char* path);
 LIBSWA16_API bool swa16_cpu_flgs_unload(const swa16_cpu_t* cpu, const char* path);

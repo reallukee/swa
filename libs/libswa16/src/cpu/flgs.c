@@ -231,8 +231,9 @@ bool swa16_cpu_flgs_print(
     );
 }
 
-bool swa16_cpu_flgs_exprint(const swa16_cpu_t* cpu,
-                            void               (*callback)(swa16_cpu_flgs_t flg, swa16_flag_t value))
+bool swa16_cpu_flgs_exprint(
+    const swa16_cpu_t* cpu,
+    void  (*callback)(swa16_cpu_flgs_t flg, swa16_flag_t value))
 {
     if (cpu == NULL || callback == NULL)
     {

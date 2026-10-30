@@ -59,10 +59,12 @@ LIBSWA16_API swa16_addr_t swa16_cpu_pc_from(swa16_word_t value);
 LIBSWA16_API const char*  swa16_cpu_pc_to_name  (swa16_addr_t pc);
 LIBSWA16_API swa16_addr_t swa16_cpu_pc_from_name(const char* name);
 
-LIBSWA16_API bool swa16_cpu_pc_print(const swa16_cpu_t* cpu);
+LIBSWA16_API bool swa16_cpu_pc_print(
+    const swa16_cpu_t* cpu);
 
-LIBSWA16_API bool swa16_cpu_pc_exprint(const swa16_cpu_t* cpu,
-                                       void               (*callback)(swa16_addr_t pc, swa16_word_t value));
+LIBSWA16_API bool swa16_cpu_pc_exprint(
+    const swa16_cpu_t* cpu,
+    void  (*callback)(swa16_addr_t pc, swa16_word_t value));
 
 LIBSWA16_API bool swa16_cpu_pc_load  (swa16_cpu_t* cpu, const char* path);
 LIBSWA16_API bool swa16_cpu_pc_unload(const swa16_cpu_t* cpu, const char* path);

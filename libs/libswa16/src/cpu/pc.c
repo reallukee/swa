@@ -244,15 +244,17 @@ static void printex_callback(swa16_addr_t pc, swa16_word_t value)
     printf("%d: %d\n", pc, value);
 }
 
-bool swa16_cpu_pc_print(const swa16_cpu_t* cpu)
+bool swa16_cpu_pc_print(
+    const swa16_cpu_t* cpu)
 {
     return swa16_cpu_pc_exprint(
         cpu, printex_callback
     );
 }
 
-bool swa16_cpu_pc_exprint(const swa16_cpu_t* cpu,
-                          void               (*callback)(swa16_addr_t pc, swa16_word_t value))
+bool swa16_cpu_pc_exprint(
+    const swa16_cpu_t* cpu,
+    void  (*callback)(swa16_addr_t pc, swa16_word_t value))
 {
     if (cpu == NULL || callback == NULL)
     {
