@@ -10,8 +10,8 @@
 //  https://github.com/reallukee/swa
 //
 
-#ifndef LIBSWA16_ISA_INSTS_H
-#define LIBSWA16_ISA_INSTS_H
+#ifndef LIBSWA16_INSTS_H
+#define LIBSWA16_INSTS_H
 
 #include <insts/alo.h>
 #include <insts/brc.h>
@@ -25,4 +25,4 @@ LIBSWA16_NAMESPACE_BEGIN
 
 LIBSWA16_NAMESPACE_END
 
-#endif // !LIBSWA16_ISA_INSTS_H
+#endif // !LIBSWA16_INSTS_H

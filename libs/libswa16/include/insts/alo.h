@@ -10,8 +10,8 @@
 //  https://github.com/reallukee/swa
 //
 
-#ifndef LIBSWA16_ISA_INSTS_ALO_H
-#define LIBSWA16_ISA_INSTS_ALO_H
+#ifndef LIBSWA16_INSTS_ALO_H
+#define LIBSWA16_INSTS_ALO_H
 
 #include <isa.h>
 #include <fmt.h>
@@ -21,30 +21,38 @@ LIBSWA16_NAMESPACE_BEGIN
 
 typedef struct swa16_mac swa16_mac_t;
 
-LIBSWA16_API swa16_isa_sign_t swa16_isa_insts_add(const swa16_mac_t*      mac,
-                                                  const swa16_isa_inst_t* inst);
+LIBSWA16_API swa16_isa_sign_t swa16_insts_add(
+    const swa16_mac_t*      mac,
+    const swa16_isa_inst_t* inst);
 
-LIBSWA16_API swa16_isa_sign_t swa16_isa_insts_sub(const swa16_mac_t*      mac,
-                                                  const swa16_isa_inst_t* inst);
+LIBSWA16_API swa16_isa_sign_t swa16_insts_sub(
+    const swa16_mac_t*      mac,
+    const swa16_isa_inst_t* inst);
 
-LIBSWA16_API swa16_isa_sign_t swa16_isa_insts_and(const swa16_mac_t*      mac,
-                                                  const swa16_isa_inst_t* inst);
+LIBSWA16_API swa16_isa_sign_t swa16_insts_and(
+    const swa16_mac_t*      mac,
+    const swa16_isa_inst_t* inst);
 
-LIBSWA16_API swa16_isa_sign_t swa16_isa_insts_ior(const swa16_mac_t*      mac,
-                                                  const swa16_isa_inst_t* inst);
+LIBSWA16_API swa16_isa_sign_t swa16_insts_ior(
+    const swa16_mac_t*      mac,
+    const swa16_isa_inst_t* inst);
 
-LIBSWA16_API swa16_isa_sign_t swa16_isa_insts_xor(const swa16_mac_t*      mac,
-                                                  const swa16_isa_inst_t* inst);
+LIBSWA16_API swa16_isa_sign_t swa16_insts_xor(
+    const swa16_mac_t*      mac,
+    const swa16_isa_inst_t* inst);
 
-LIBSWA16_API swa16_isa_sign_t swa16_isa_insts_shl(const swa16_mac_t*      mac,
-                                                  const swa16_isa_inst_t* inst);
+LIBSWA16_API swa16_isa_sign_t swa16_insts_shl(
+    const swa16_mac_t*      mac,
+    const swa16_isa_inst_t* inst);
 
-LIBSWA16_API swa16_isa_sign_t swa16_isa_insts_shr(const swa16_mac_t*      mac,
-                                                  const swa16_isa_inst_t* inst);
+LIBSWA16_API swa16_isa_sign_t swa16_insts_shr(
+    const swa16_mac_t*      mac,
+    const swa16_isa_inst_t* inst);
 
-LIBSWA16_API swa16_isa_sign_t swa16_isa_insts_sar(const swa16_mac_t*      mac,
-                                                  const swa16_isa_inst_t* inst);
+LIBSWA16_API swa16_isa_sign_t swa16_insts_sar(
+    const swa16_mac_t*      mac,
+    const swa16_isa_inst_t* inst);
 
 LIBSWA16_NAMESPACE_END
 
-#endif // !LIBSWA16_ISA_INSTS_ALO_H
+#endif // !LIBSWA16_INSTS_ALO_H

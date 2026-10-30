@@ -14,8 +14,9 @@
 
 #include "macint.h"
 
-static swa16_isa_sign_t swa16_isa_insts_ecall(const swa16_mac_t*      mac,
-                                              const swa16_fmt_argf_t* fmt_argf)
+static swa16_isa_sign_t swa16_insts_ecall(
+    const swa16_mac_t*      mac,
+    const swa16_fmt_argf_t* fmt_argf)
 {
     if (mac == NULL || fmt_argf == NULL)
     {
@@ -37,8 +38,9 @@ static swa16_isa_sign_t swa16_isa_insts_ecall(const swa16_mac_t*      mac,
     return SWA16_ISA_SIGN_NEXT;
 }
 
-static swa16_isa_sign_t swa16_isa_insts_scall(const swa16_mac_t*      mac,
-                                              const swa16_fmt_argf_t* fmt_argf)
+static swa16_isa_sign_t swa16_insts_scall(
+    const swa16_mac_t*      mac,
+    const swa16_fmt_argf_t* fmt_argf)
 {
     if (mac == NULL || fmt_argf == NULL)
     {
@@ -60,8 +62,9 @@ static swa16_isa_sign_t swa16_isa_insts_scall(const swa16_mac_t*      mac,
     return SWA16_ISA_SIGN_NEXT;
 }
 
-swa16_isa_sign_t swa16_isa_insts_cll(const swa16_mac_t*      mac,
-                                     const swa16_isa_inst_t* inst)
+swa16_isa_sign_t swa16_insts_cll(
+    const swa16_mac_t*      mac,
+    const swa16_isa_inst_t* inst)
 {
     swa16_fmt_argf_t fmt_argf;
 
@@ -90,8 +93,8 @@ swa16_isa_sign_t swa16_isa_insts_cll(const swa16_mac_t*      mac,
     {
         switch (inst->mode)
         {
-        case SWA16_ISA_MODE_EMULATOR: return swa16_isa_insts_ecall(mac, &fmt_argf);
-        case SWA16_ISA_MODE_SYSTEM:   return swa16_isa_insts_scall(mac, &fmt_argf);
+        case SWA16_ISA_MODE_EMULATOR: return swa16_insts_ecall(mac, &fmt_argf);
+        case SWA16_ISA_MODE_SYSTEM:   return swa16_insts_scall(mac, &fmt_argf);
 
         case SWA16_ISA_MODE_NONE:     return SWA16_ISA_SIGN_CRITICAL;
 
