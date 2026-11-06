@@ -201,7 +201,14 @@ swa16_addr_t swa16_mem_wrds_from_name(const char* name)
 
 static void printex_callback(swa16_addr_t wrds, swa16_word_t value)
 {
-    printf("%d: %d\n", wrds, value);
+    printf(
+        " * %14s [%02hu, 0x%02hX] : [%02hu, 0x%02hX]\n",
+        swa16_mem_wrds_to_name(wrds),
+        swa16_mem_wrds_to(wrds),
+        swa16_mem_wrds_to(wrds),
+        value,
+        value
+    );
 }
 
 bool swa16_mem_wrds_print(
@@ -225,6 +232,8 @@ bool swa16_mem_wrds_exprint(
         return false;
     }
 
+    printf(">>> MEM : WRDS\n");
+
     for (swa16_word_t i = start; i < start + count + 1; ++i)
     {
         swa16_word_t out;
@@ -236,6 +245,8 @@ bool swa16_mem_wrds_exprint(
 
         callback(i, out);
     }
+
+    printf("<<<\n");
 
     return true;
 }

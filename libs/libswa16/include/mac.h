@@ -37,6 +37,10 @@ LIBSWA16_API swa16_isa_sign_t swa16_mac_encode(const swa16_isa_inst_t* inst, swa
 
 LIBSWA16_API swa16_isa_sign_t swa16_mac_execute(const swa16_mac_t* mac, const swa16_isa_inst_t* inst);
 
+LIBSWA16_API void swa16_mac_cpu_regs_print(const swa16_mac_t* mac);
+LIBSWA16_API void swa16_mac_cpu_pc_print  (const swa16_mac_t* mac);
+LIBSWA16_API void swa16_mac_cpu_flgs_print(const swa16_mac_t* mac);
+
 LIBSWA16_NAMESPACE_END
 
 #endif // !LIBSWA16_MAC_H

@@ -241,7 +241,14 @@ swa16_addr_t swa16_cpu_pc_from_name(const char* name)
 
 static void printex_callback(swa16_addr_t pc, swa16_word_t value)
 {
-    printf("%d: %d\n", pc, value);
+    printf(
+        " * %14s [%02hu, 0x%02hX] : [%02hu, 0x%02hX]\n",
+        swa16_cpu_pc_to_name(pc),
+        swa16_cpu_pc_to(pc),
+        swa16_cpu_pc_to(pc),
+        value,
+        value
+    );
 }
 
 bool swa16_cpu_pc_print(
@@ -261,6 +268,8 @@ bool swa16_cpu_pc_exprint(
         return false;
     }
 
+    printf(">>> CPU : PC\n");
+
     if (true)
     {
         swa16_word_t out;
@@ -272,6 +281,8 @@ bool swa16_cpu_pc_exprint(
 
         callback(0, out);
     }
+
+    printf("<<<\n");
 
     return true;
 }

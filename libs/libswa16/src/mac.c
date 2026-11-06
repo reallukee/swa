@@ -254,3 +254,20 @@ swa16_isa_sign_t swa16_mac_execute(const swa16_mac_t* mac, const swa16_isa_inst_
 
     return SWA16_ISA_SIGN_DANGER;
 }
+
+
+
+void swa16_mac_cpu_regs_print(const swa16_mac_t* mac)
+{
+    swa16_cpu_regs_print(mac->cpu);
+}
+
+void swa16_mac_cpu_pc_print(const swa16_mac_t* mac)
+{
+    swa16_cpu_pc_print(mac->cpu);
+}
+
+void swa16_mac_cpu_flgs_print(const swa16_mac_t* mac)
+{
+    swa16_cpu_flgs_print(mac->cpu);
+}

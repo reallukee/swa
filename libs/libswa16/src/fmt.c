@@ -14,9 +14,10 @@
 
 #include "isaint.h"
 
-bool swa16_fmt_inst_to_argn(const swa16_cpu_t*      cpu,
-                            const swa16_isa_inst_t* inst,
-                            swa16_fmt_argn_t*       fmt_argn)
+bool swa16_fmt_inst_to_argn(
+    const swa16_cpu_t*      cpu,
+    const swa16_isa_inst_t* inst,
+    swa16_fmt_argn_t*       fmt_argn)
 {
     if (cpu == NULL || inst == NULL || fmt_argn == NULL)
     {
@@ -75,9 +76,10 @@ bool swa16_fmt_inst_to_argn(const swa16_cpu_t*      cpu,
     return true;
 }
 
-bool swa16_fmt_inst_to_argf(const swa16_cpu_t*      cpu,
-                            const swa16_isa_inst_t* inst,
-                            swa16_fmt_argf_t*       fmt_argf)
+bool swa16_fmt_inst_to_argf(
+    const swa16_cpu_t*      cpu,
+    const swa16_isa_inst_t* inst,
+    swa16_fmt_argf_t*       fmt_argf)
 {
     if (cpu == NULL || inst == NULL || fmt_argf == NULL)
     {
@@ -116,9 +118,10 @@ bool swa16_fmt_inst_to_argf(const swa16_cpu_t*      cpu,
     return true;
 }
 
-bool swa16_fmt_inst_to_argfm(const swa16_cpu_t*      cpu,
-                             const swa16_isa_inst_t* inst,
-                             swa16_fmt_argfm_t*      fmt_argfm)
+bool swa16_fmt_inst_to_argfm(
+    const swa16_cpu_t*      cpu,
+    const swa16_isa_inst_t* inst,
+    swa16_fmt_argfm_t*      fmt_argfm)
 {
     if (cpu == NULL || inst == NULL || fmt_argfm == NULL)
     {
@@ -154,9 +157,10 @@ bool swa16_fmt_inst_to_argfm(const swa16_cpu_t*      cpu,
     return true;
 }
 
-bool swa16_fmt_inst_to_argtm(const swa16_cpu_t*      cpu,
-                             const swa16_isa_inst_t* inst,
-                             swa16_fmt_argtm_t*      fmt_argtm)
+bool swa16_fmt_inst_to_argtm(
+    const swa16_cpu_t*      cpu,
+    const swa16_isa_inst_t* inst,
+    swa16_fmt_argtm_t*      fmt_argtm)
 {
     if (cpu == NULL || inst == NULL || fmt_argtm == NULL)
     {

@@ -220,7 +220,14 @@ swa16_cpu_flgs_t swa16_cpu_flgs_from_name(const char* name)
 
 static void printex_callback(swa16_cpu_flgs_t flg, swa16_flag_t value)
 {
-    printf("%d: %d\n", flg, value);
+    printf(
+        " * %8s [%02hu, 0x%02hX] : [%02hu, 0x%02hX]\n",
+        swa16_cpu_flgs_to_name(flg),
+        swa16_cpu_flgs_to(flg),
+        swa16_cpu_flgs_to(flg),
+        value,
+        value
+    );
 }
 
 bool swa16_cpu_flgs_print(
@@ -240,6 +247,8 @@ bool swa16_cpu_flgs_exprint(
         return false;
     }
 
+    printf(">>> CPU : FLGS\n");
+
     for (swa16_word_t i = SWA16_CPU_FLGS_START; i < SWA16_CPU_FLGS_SIZE; ++i)
     {
         swa16_flag_t out;
@@ -251,6 +260,8 @@ bool swa16_cpu_flgs_exprint(
 
         callback(i, out);
     }
+
+    printf("<<<\n");
 
     return true;
 }

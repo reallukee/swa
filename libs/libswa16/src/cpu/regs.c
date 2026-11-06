@@ -240,7 +240,14 @@ swa16_cpu_regs_t swa16_cpu_regs_from_name(const char* name)
 
 static void printex_callback(swa16_cpu_regs_t reg, swa16_word_t value)
 {
-    printf("%d: %d\n", reg, value);
+    printf(
+        " * %2s [%02hu, 0x%02hX] : [%02hu, 0x%02hX]\n",
+        swa16_cpu_regs_to_name(reg),
+        swa16_cpu_regs_to(reg),
+        swa16_cpu_regs_to(reg),
+        value,
+        value
+    );
 }
 
 bool swa16_cpu_regs_print(
@@ -260,6 +267,8 @@ bool swa16_cpu_regs_exprint(
         return false;
     }
 
+    printf(">>> CPU : REGS\n");
+
     for (swa16_word_t i = SWA16_CPU_REGS_START; i < SWA16_CPU_REGS_SIZE; ++i)
     {
         swa16_word_t out;
@@ -271,6 +280,8 @@ bool swa16_cpu_regs_exprint(
 
         callback(i, out);
     }
+
+    printf("<<<\n");
 
     return true;
 }
