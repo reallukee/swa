@@ -1,12 +1,12 @@
 # ***********************
 # libswa16 macOS Makefile
 # ***********************
-#   v2.1
+#   v2.2
 
 TARGET_NAME ?= libswa16
 TARGET_EXT  ?=
-OUT_DIR     ?= bin/macos
-OBJ_DIR     ?= obj/macos
+OUT_DIR     ?= ../../bin/macos
+OBJ_DIR     ?= ../../obj/macos/$(TARGET_NAME)$(TARGET_EXT)
 SRC_DIR     ?= src
 INCLUDE_DIR ?= include
 

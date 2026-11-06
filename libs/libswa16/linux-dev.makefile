@@ -1,12 +1,12 @@
 # ***********************
 # libswa16 Linux Makefile
 # ***********************
-#   v2.1
+#   v2.2
 
 TARGET_NAME ?= libswa16
 TARGET_EXT  ?=
-OUT_DIR     ?= bin/linux
-OBJ_DIR     ?= obj/linux
+OUT_DIR     ?= ../../bin/linux
+OBJ_DIR     ?= ../../obj/linux/$(TARGET_NAME)$(TARGET_EXT)
 SRC_DIR     ?= src
 INCLUDE_DIR ?= include
 
