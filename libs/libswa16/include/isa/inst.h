@@ -23,6 +23,16 @@
 
 LIBSWA16_NAMESPACE_BEGIN
 
+typedef enum swa16_isa_inst_fmt : swa16_word_t
+{
+    SWA16_ISA_INST_FMT_ARGN  = 0x0000, // 0x0000 --- ARGN
+    SWA16_ISA_INST_FMT_ARGF  = 0x0001, // 0x0001 --- ARGF
+    SWA16_ISA_INST_FMT_ARGFM = 0x0002, // 0x0002 --- ARGFM
+    SWA16_ISA_INST_FMT_ARGTM = 0x0003, // 0x0003 --- ARGTM
+
+    SWA16_ISA_INST_FMT_NONE  = 0xFFFF, // 0xFFFF --- Fallback Value
+} swa16_isa_inst_fmt_t;
+
 typedef struct swa16_isa_inst
 {
     unsigned opcode : 4;

@@ -135,7 +135,7 @@ bool swa16_mem_wrds_sethi(swa16_mem_t* mem, swa16_addr_t addr, swa16_byte_t in)
 
 bool swa16_mem_wrds_isGp(swa16_addr_t addr)
 {
-    return swa16_mem_wrds_isNull(addr) && swa16_mem_wrds_isNone(addr);
+    return !swa16_mem_wrds_isNull(addr) && !swa16_mem_wrds_isNone(addr);
 }
 
 bool swa16_mem_wrds_isNull(swa16_addr_t addr)
@@ -246,7 +246,7 @@ bool swa16_mem_wrds_exprint(
         callback(i, out);
     }
 
-    printf("<<<\n");
+    printf("<<<\n\n");
 
     return true;
 }

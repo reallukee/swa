@@ -153,7 +153,7 @@ bool swa16_cpu_flgs_tohi(
 
 bool swa16_cpu_flgs_isGp(swa16_cpu_flgs_t flg)
 {
-    return swa16_cpu_flgs_isNull(flg) && swa16_cpu_flgs_isNone(flg);
+    return !swa16_cpu_flgs_isNull(flg) && !swa16_cpu_flgs_isNone(flg);
 }
 
 bool swa16_cpu_flgs_isNull(swa16_cpu_flgs_t flg)
@@ -261,7 +261,7 @@ bool swa16_cpu_flgs_exprint(
         callback(i, out);
     }
 
-    printf("<<<\n");
+    printf("<<<\n\n");
 
     return true;
 }

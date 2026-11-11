@@ -153,7 +153,7 @@ bool swa16_cpu_regs_sethi(
 
 bool swa16_cpu_regs_isGp(swa16_cpu_regs_t reg)
 {
-    return swa16_cpu_regs_isNull(reg) && swa16_cpu_regs_isNone(reg);
+    return !swa16_cpu_regs_isNull(reg) && !swa16_cpu_regs_isNone(reg);
 }
 
 bool swa16_cpu_regs_isNull(swa16_cpu_regs_t reg)
@@ -281,7 +281,7 @@ bool swa16_cpu_regs_exprint(
         callback(i, out);
     }
 
-    printf("<<<\n");
+    printf("<<<\n\n");
 
     return true;
 }

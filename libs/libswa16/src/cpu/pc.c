@@ -175,7 +175,7 @@ bool swa16_cpu_pc_sub(swa16_cpu_t* cpu, swa16_word_t value)
 
 bool swa16_cpu_pc_isGp(swa16_addr_t addr)
 {
-    return swa16_cpu_pc_isNull(addr) && swa16_cpu_pc_isNone(addr);
+    return !swa16_cpu_pc_isNull(addr) && !swa16_cpu_pc_isNone(addr);
 }
 
 bool swa16_cpu_pc_isNull(swa16_addr_t addr)
@@ -282,7 +282,7 @@ bool swa16_cpu_pc_exprint(
         callback(0, out);
     }
 
-    printf("<<<\n");
+    printf("<<<\n\n");
 
     return true;
 }

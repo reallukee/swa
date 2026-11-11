@@ -16,7 +16,7 @@ const swa16_word_t SWA16_ADDR_ENTRYPOINT = 0x0001;
 
 bool swa16_addr_isGp(swa16_addr_t addr)
 {
-    return swa16_addr_isNull(addr) && swa16_addr_isNone(addr);
+    return !swa16_addr_isNull(addr) && !swa16_addr_isNone(addr);
 }
 
 bool swa16_addr_isNull(swa16_addr_t addr)
