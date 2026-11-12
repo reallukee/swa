@@ -259,6 +259,11 @@ swa16_isa_sign_t swa16_mac_execute(const swa16_mac_t* mac, const swa16_isa_inst_
 
 const swa16_cpu_t* swa16_mac_get_cpu(const swa16_mac_t* mac)
 {
+    if (mac == NULL)
+    {
+        return NULL;
+    }
+
     return mac->cpu;
 }
 
@@ -266,15 +271,30 @@ const swa16_cpu_t* swa16_mac_get_cpu(const swa16_mac_t* mac)
 
 const swa16_nvm_t* swa16_mac_get_nvm(const swa16_mac_t* mac)
 {
+    if (mac == NULL)
+    {
+        return NULL;
+    }
+
     return mac->nvm;
 }
 
 const swa16_ram_t* swa16_mac_get_ram(const swa16_mac_t* mac)
 {
+    if (mac == NULL)
+    {
+        return NULL;
+    }
+
     return mac->ram;
 }
 
 const swa16_rom_t* swa16_mac_get_rom(const swa16_mac_t* mac)
 {
+    if (mac == NULL)
+    {
+        return NULL;
+    }
+
     return mac->rom;
 }
