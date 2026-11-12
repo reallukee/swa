@@ -257,17 +257,24 @@ swa16_isa_sign_t swa16_mac_execute(const swa16_mac_t* mac, const swa16_isa_inst_
 
 
 
-void swa16_mac_cpu_regs_print(const swa16_mac_t* mac)
+const swa16_cpu_t* swa16_mac_get_cpu(const swa16_mac_t* mac)
 {
-    swa16_cpu_regs_print(mac->cpu);
+    return mac->cpu;
 }
 
-void swa16_mac_cpu_pc_print(const swa16_mac_t* mac)
+
+
+const swa16_nvm_t* swa16_mac_get_nvm(const swa16_mac_t* mac)
 {
-    swa16_cpu_pc_print(mac->cpu);
+    return mac->nvm;
 }
 
-void swa16_mac_cpu_flgs_print(const swa16_mac_t* mac)
+const swa16_ram_t* swa16_mac_get_ram(const swa16_mac_t* mac)
 {
-    swa16_cpu_flgs_print(mac->cpu);
+    return mac->ram;
+}
+
+const swa16_rom_t* swa16_mac_get_rom(const swa16_mac_t* mac)
+{
+    return mac->rom;
 }

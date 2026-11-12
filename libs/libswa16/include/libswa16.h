@@ -27,6 +27,8 @@
 #include <cpu.h>
 #include <mem.h>
 
+#include <insts.h>
+
 LIBSWA16_NAMESPACE_BEGIN
 
 #define LIBSWA16_VERSION_H     200

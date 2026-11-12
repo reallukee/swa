@@ -10,7 +10,7 @@
 //  https://github.com/reallukee/swa
 //
 
-#include <libswa16.h>
+#include "libswa16int.h"
 
 int main(int argc, const char* argv[])
 {
