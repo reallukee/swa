@@ -4,7 +4,7 @@
 #   v2.2
 
 TARGET_NAME ?= swaasm16
-TARGET_EXT  ?= .so
+TARGET_EXT  ?=
 OUT_DIR     ?= ../../bin/linux
 OBJ_DIR     ?= ../../obj/linux/$(TARGET_NAME)$(TARGET_EXT)
 SRC_DIR     ?= src
@@ -15,7 +15,7 @@ LIBSWA16_LIB     ?= ../../bin/linux
 LIBSWA16_INCLUDE ?= ../../libs/libswa16/include
 
 CC      = gcc
-CFLAGS  = -std=c23 -Wall -Wextra -fPIC -I$(SRC_DIR) -I$(INCLUDE_DIR) -I$(LIBSWA16_INCLUDE)
+CFLAGS  = -std=c23 -Wall -Wextra -fPIC -I$(SRC_DIR) -I$(LIBSWA16_INCLUDE) -I$(INCLUDE_DIR)
 LDFLAGS = -L$(LIBSWA16_LIB) -l$(LIBSWA16_NAME)
 
 ifeq ($(debug),1)
