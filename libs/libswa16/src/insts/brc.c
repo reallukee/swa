@@ -10,7 +10,7 @@
 //  https://github.com/reallukee/swa
 //
 
-#include <insts/brc.h>
+#include "insts/brc.h"
 
 #include "macint.h"
 

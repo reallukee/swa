@@ -10,7 +10,7 @@
 //  https://github.com/reallukee/swa
 //
 
-#include <isa/mode.h>
+#include "isa/mode.h"
 
 swa16_word_t swa16_isa_mode_to(swa16_isa_mode_t mode)
 {

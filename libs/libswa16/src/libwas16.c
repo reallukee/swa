@@ -10,7 +10,9 @@
 //  https://github.com/reallukee/swa
 //
 
-#include <libswa16.h>
+#include "libswa16.h"
+
+#include "libswa16int.h"
 
 const uint64_t LIBSWA16_VERSION     = 200;
 const uint64_t LIBSWA16_MIN_VERSION = 200;

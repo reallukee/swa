@@ -13,11 +13,11 @@
 #ifndef LIBSWA16_TYPES_ADDR_H
 #define LIBSWA16_TYPES_ADDR_H
 
-#include <utils/header.h>
-#include <utils/export.h>
-#include <utils/macros.h>
+#include "utils/header.h"
+#include "utils/export.h"
+#include "utils/macros.h"
 
-#include <types/binint.h>
+#include "types/binint.h"
 
 LIBSWA16_NAMESPACE_BEGIN
 

@@ -10,7 +10,7 @@
 //  https://github.com/reallukee/swa
 //
 
-#include <types/flag.h>
+#include "types/flag.h"
 
 swa16_word_t swa16_flag_to(swa16_flag_t flag)
 {

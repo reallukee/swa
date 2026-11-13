@@ -10,7 +10,7 @@
 //  https://github.com/reallukee/swa
 //
 
-#include <isa/opcode.h>
+#include "isa/opcode.h"
 
 swa16_word_t swa16_isa_opcode_to(swa16_isa_opcode_t opcode)
 {

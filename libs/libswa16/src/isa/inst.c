@@ -10,4 +10,4 @@
 //  https://github.com/reallukee/swa
 //
 
-#include <isa/inst.h>
+#include "isa/inst.h"

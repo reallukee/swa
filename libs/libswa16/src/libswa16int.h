@@ -13,7 +13,7 @@
 #ifndef LIBSWA16_LIBSWA16INT_H
 #define LIBSWA16_LIBSWA16INT_H
 
-#include <libswa16.h>
+#include "libswa16.h"
 
 #include "macint.h"
 

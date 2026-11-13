@@ -10,7 +10,7 @@
 //  https://github.com/reallukee/swa
 //
 
-#include <types/binint.h>
+#include "types/binint.h"
 
 swa16_byte_t swa16_binint_gwlo(swa16_word_t wordv)
 {

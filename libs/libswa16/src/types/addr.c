@@ -10,7 +10,7 @@
 //  https://github.com/reallukee/swa
 //
 
-#include <types/addr.h>
+#include "types/addr.h"
 
 const swa16_word_t SWA16_ADDR_ENTRYPOINT = 0x0001;
 

@@ -10,7 +10,7 @@
 //  https://github.com/reallukee/swa
 //
 
-#include <mem/wrds.h>
+#include "mem/wrds.h"
 
 #include "isaint.h"
 #include "cpuint.h"

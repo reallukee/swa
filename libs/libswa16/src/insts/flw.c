@@ -10,7 +10,7 @@
 //  https://github.com/reallukee/swa
 //
 
-#include <insts/flw.h>
+#include "insts/flw.h"
 
 #include "macint.h"
 

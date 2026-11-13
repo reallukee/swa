@@ -13,9 +13,9 @@
 #ifndef LIBSWA16_TYPES_BININT_H
 #define LIBSWA16_TYPES_BININT_H
 
-#include <utils/header.h>
-#include <utils/export.h>
-#include <utils/macros.h>
+#include "utils/header.h"
+#include "utils/export.h"
+#include "utils/macros.h"
 
 LIBSWA16_NAMESPACE_BEGIN
 

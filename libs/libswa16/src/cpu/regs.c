@@ -10,7 +10,7 @@
 //  https://github.com/reallukee/swa
 //
 
-#include <cpu/regs.h>
+#include "cpu/regs.h"
 
 #include "isaint.h"
 #include "cpuint.h"

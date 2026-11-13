@@ -10,7 +10,7 @@
 //  https://github.com/reallukee/swa
 //
 
-#include <cpu/flgs.h>
+#include "cpu/flgs.h"
 
 #include "isaint.h"
 #include "cpuint.h"

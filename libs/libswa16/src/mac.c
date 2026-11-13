@@ -10,7 +10,7 @@
 //  https://github.com/reallukee/swa
 //
 
-#include <mac.h>
+#include "mac.h"
 
 #include "macint.h"
 

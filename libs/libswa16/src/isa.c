@@ -10,7 +10,7 @@
 //  https://github.com/reallukee/swa
 //
 
-#include <isa.h>
+#include "isa.h"
 
 #include "isaint.h"
 

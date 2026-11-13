@@ -10,7 +10,7 @@
 //  https://github.com/reallukee/swa
 //
 
-#include <insts/alo.h>
+#include "insts/alo.h"
 
 #include "macint.h"
 

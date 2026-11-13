@@ -13,9 +13,9 @@
 #ifndef LIBSWA16_INSTS_MAO_H
 #define LIBSWA16_INSTS_MAO_H
 
-#include <isa.h>
-#include <fmt.h>
-#include <ctx.h>
+#include "isa.h"
+#include "fmt.h"
+#include "ctx.h"
 
 LIBSWA16_NAMESPACE_BEGIN
 

@@ -10,7 +10,7 @@
 //  https://github.com/reallukee/swa
 //
 
-#include <isa/sign.h>
+#include "isa/sign.h"
 
 swa16_word_t swa16_isa_sign_to(swa16_isa_sign_t sign)
 {

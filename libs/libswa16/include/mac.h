@@ -13,11 +13,11 @@
 #ifndef LIBSWA16_MAC_H
 #define LIBSWA16_MAC_H
 
-#include <isa.h>
-#include <cpu.h>
-#include <mem.h>
+#include "isa.h"
+#include "cpu.h"
+#include "mem.h"
 
-#include <insts.h>
+#include "insts.h"
 
 LIBSWA16_NAMESPACE_BEGIN
 

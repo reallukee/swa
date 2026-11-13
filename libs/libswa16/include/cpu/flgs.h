@@ -13,13 +13,13 @@
 #ifndef LIBSWA16_CPU_FLGS_H
 #define LIBSWA16_CPU_FLGS_H
 
-#include <utils/header.h>
-#include <utils/export.h>
-#include <utils/macros.h>
+#include "utils/header.h"
+#include "utils/export.h"
+#include "utils/macros.h"
 
-#include <types/addr.h>
-#include <types/binint.h>
-#include <types/flag.h>
+#include "types/addr.h"
+#include "types/binint.h"
+#include "types/flag.h"
 
 LIBSWA16_NAMESPACE_BEGIN
 

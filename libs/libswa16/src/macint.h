@@ -13,11 +13,11 @@
 #ifndef LIBSWA16_MACINT_H
 #define LIBSWA16_MACINT_H
 
-#include <isa.h>
-#include <cpu.h>
-#include <mem.h>
+#include "isa.h"
+#include "cpu.h"
+#include "mem.h"
 
-#include <insts.h>
+#include "insts.h"
 
 #include "isaint.h"
 #include "cpuint.h"

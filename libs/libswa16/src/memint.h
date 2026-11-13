@@ -13,15 +13,15 @@
 #ifndef LIBSWA16_MEMINT_H
 #define LIBSWA16_MEMINT_H
 
-#include <utils/header.h>
-#include <utils/export.h>
-#include <utils/macros.h>
+#include "utils/header.h"
+#include "utils/export.h"
+#include "utils/macros.h"
 
-#include <types/addr.h>
-#include <types/binint.h>
-#include <types/flag.h>
+#include "types/addr.h"
+#include "types/binint.h"
+#include "types/flag.h"
 
-#include <mem/wrds.h>
+#include "mem/wrds.h"
 
 LIBSWA16_NAMESPACE_BEGIN
 

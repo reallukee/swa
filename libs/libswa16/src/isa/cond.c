@@ -10,7 +10,7 @@
 //  https://github.com/reallukee/swa
 //
 
-#include <isa/cond.h>
+#include "isa/cond.h"
 
 swa16_word_t swa16_isa_cond_to(swa16_isa_cond_t cond)
 {
