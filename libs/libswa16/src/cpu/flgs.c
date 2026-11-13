@@ -57,8 +57,7 @@ bool swa16_cpu_flgs_get(
         return false;
     }
 
-    if (flg < SWA16_CPU_FLGS_START ||
-        flg > SWA16_CPU_FLGS_END)
+    if (flg > SWA16_CPU_FLGS_END)
     {
         return false;
     }
@@ -114,8 +113,7 @@ bool swa16_cpu_flgs_set(
         return false;
     }
 
-    if (flg < SWA16_CPU_FLGS_START ||
-        flg > SWA16_CPU_FLGS_END)
+    if (flg > SWA16_CPU_FLGS_END)
     {
         return false;
     }

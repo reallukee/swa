@@ -276,7 +276,7 @@ bool swa16_cpu_pc_exprint(
 
         if (!swa16_cpu_pc_get(cpu, &out))
         {
-            true;
+
         }
 
         callback(0, out);

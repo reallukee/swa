@@ -132,6 +132,8 @@ static swa16_isa_sign_t swa16_insts_mao(
                 return SWA16_ISA_SIGN_CRITICAL;
             }
 
+            break;
+
         case SWA16_ISA_OPCODE_STD:
             if (swa16_insts_sd(
                     mac, inst, *(swa16_word_t*)dest, *(swa16_cpu_regs_t*)srce, &result
@@ -139,6 +141,8 @@ static swa16_isa_sign_t swa16_insts_mao(
             {
                 return SWA16_ISA_SIGN_CRITICAL;
             }
+
+            break;
 
         case SWA16_ISA_OPCODE_NONE: return SWA16_ISA_SIGN_CRITICAL;
 

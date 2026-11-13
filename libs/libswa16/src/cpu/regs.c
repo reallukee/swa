@@ -57,8 +57,7 @@ bool swa16_cpu_regs_get(
         return false;
     }
 
-    if (reg < SWA16_CPU_REGS_START ||
-        reg > SWA16_CPU_REGS_END)
+    if (reg > SWA16_CPU_REGS_END)
     {
         return false;
     }
@@ -114,8 +113,7 @@ bool swa16_cpu_regs_set(
         return false;
     }
 
-    if (reg < SWA16_CPU_REGS_START ||
-        reg > SWA16_CPU_REGS_END)
+    if (reg > SWA16_CPU_REGS_END)
     {
         return false;
     }
