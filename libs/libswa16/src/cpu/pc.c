@@ -113,7 +113,7 @@ bool swa16_cpu_pc_inc(swa16_cpu_t* cpu)
         return false;
     }
 
-    cpu->pc++;
+    cpu->pc[0]++;
 
     return true;
 }
@@ -130,7 +130,7 @@ bool swa16_cpu_pc_dec(swa16_cpu_t* cpu)
         return false;
     }
 
-    cpu->pc--;
+    cpu->pc[0]--;
 
     return true;
 }

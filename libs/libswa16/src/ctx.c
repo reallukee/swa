@@ -68,13 +68,13 @@ swa16_flag_t swa16_ctx_compute_borrow(swa16_long_t result)
 
 swa16_flag_t swa16_ctx_compute_negative(swa16_long_t result)
 {
-    return ((swa16_long_t)result & SSWA16_WORD_MAX) != 0;
+    return ((swa16_long_t)result & SWA16_SWORD_MAX) != 0;
 }
 
 swa16_flag_t swa16_ctx_compute_overflow(swa16_long_t result)
 {
-    return ((swa16_long_t)result > SSWA16_WORD_MAX ||
-            (swa16_long_t)result < SSWA16_WORD_MIN);
+    return ((swa16_long_t)result > SWA16_SWORD_MAX ||
+            (swa16_long_t)result < SWA16_SWORD_MIN);
 }
 
 

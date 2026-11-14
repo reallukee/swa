@@ -97,7 +97,7 @@ swa16_isa_sign_t swa16_mac_fetch(const swa16_mac_t* mac, swa16_word_t* word)
     swa16_word_t pc = SWA16_CPU_PC_NULL;
 
     if (!swa16_cpu_pc_get  (mac->cpu, &pc)      ||
-        !swa16_mem_wrds_get(mac->rom, pc, word) ||
+        !swa16_mem_wrds_get(mac->nvm, pc, word) ||
         !swa16_cpu_pc_inc  (mac->cpu))
     {
         return SWA16_ISA_SIGN_CRITICAL;
@@ -116,7 +116,7 @@ swa16_isa_sign_t swa16_mac_defetch(const swa16_mac_t* mac, swa16_word_t* word)
     swa16_word_t pc = SWA16_CPU_PC_NULL;
 
     if (!swa16_cpu_pc_get  (mac->cpu, &pc)      ||
-        !swa16_mem_wrds_get(mac->rom, pc, word) ||
+        !swa16_mem_wrds_get(mac->nvm, pc, word) ||
         !swa16_cpu_pc_dec  (mac->cpu))
     {
         return SWA16_ISA_SIGN_CRITICAL;

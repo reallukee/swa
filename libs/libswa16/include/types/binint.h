@@ -32,8 +32,8 @@ typedef int16_t  swa16_sword_t;
 
 #define SWA16_WORD_MIN  0x0000
 #define SWA16_WORD_MAX  0xFFFF
-#define SSWA16_WORD_MIN 0x8000
-#define SSWA16_WORD_MAX 0x7FFF
+#define SWA16_SWORD_MIN 0x8000
+#define SWA16_SWORD_MAX 0x7FFF
 
 LIBSWA16_API swa16_byte_t swa16_binint_gwlo(swa16_word_t wordv);
 LIBSWA16_API swa16_byte_t swa16_binint_gwhi(swa16_word_t wordv);
