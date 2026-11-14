@@ -28,7 +28,7 @@ bool swa16_cpu_regs_init(swa16_cpu_t* cpu)
         return true;
     }
 
-    memset(cpu->regs, 0, sizeof(cpu->regs));
+    memset(cpu->regs, 0, SWA16_CPU_REGS_SIZE * sizeof(cpu->regs));
 
     cpu->regs_init = true;
 
@@ -104,9 +104,9 @@ bool swa16_cpu_regs_gethi(
 
 
 bool swa16_cpu_regs_set(
-    swa16_cpu_t*     cpu,
-    swa16_cpu_regs_t reg,
-    swa16_word_t     in)
+    const swa16_cpu_t* cpu,
+    swa16_cpu_regs_t   reg,
+    swa16_word_t       in)
 {
     if (cpu == NULL)
     {
@@ -124,9 +124,9 @@ bool swa16_cpu_regs_set(
 }
 
 bool swa16_cpu_regs_setlo(
-    swa16_cpu_t*     cpu,
-    swa16_cpu_regs_t reg,
-    swa16_byte_t     in)
+    const swa16_cpu_t* cpu,
+    swa16_cpu_regs_t   reg,
+    swa16_byte_t       in)
 {
     swa16_word_t word_in = 0;
 
@@ -136,9 +136,9 @@ bool swa16_cpu_regs_setlo(
 }
 
 bool swa16_cpu_regs_sethi(
-    swa16_cpu_t*     cpu,
-    swa16_cpu_regs_t reg,
-    swa16_byte_t     in)
+    const swa16_cpu_t* cpu,
+    swa16_cpu_regs_t   reg,
+    swa16_byte_t       in)
 {
     swa16_word_t word_in = 0;
 

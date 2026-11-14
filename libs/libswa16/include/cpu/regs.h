@@ -58,9 +58,9 @@ LIBSWA16_API bool swa16_cpu_regs_isInit(const swa16_cpu_t* cpu);
 LIBSWA16_API bool swa16_cpu_regs_get  (const swa16_cpu_t* cpu, swa16_cpu_regs_t reg, swa16_word_t* out);
 LIBSWA16_API bool swa16_cpu_regs_getlo(const swa16_cpu_t* cpu, swa16_cpu_regs_t reg, swa16_byte_t* out);
 LIBSWA16_API bool swa16_cpu_regs_gethi(const swa16_cpu_t* cpu, swa16_cpu_regs_t reg, swa16_byte_t* out);
-LIBSWA16_API bool swa16_cpu_regs_set  (swa16_cpu_t* cpu, swa16_cpu_regs_t reg, swa16_word_t in);
-LIBSWA16_API bool swa16_cpu_regs_setlo(swa16_cpu_t* cpu, swa16_cpu_regs_t reg, swa16_byte_t in);
-LIBSWA16_API bool swa16_cpu_regs_sethi(swa16_cpu_t* cpu, swa16_cpu_regs_t reg, swa16_byte_t in);
+LIBSWA16_API bool swa16_cpu_regs_set  (const swa16_cpu_t* cpu, swa16_cpu_regs_t reg, swa16_word_t in);
+LIBSWA16_API bool swa16_cpu_regs_setlo(const swa16_cpu_t* cpu, swa16_cpu_regs_t reg, swa16_byte_t in);
+LIBSWA16_API bool swa16_cpu_regs_sethi(const swa16_cpu_t* cpu, swa16_cpu_regs_t reg, swa16_byte_t in);
 
 LIBSWA16_API bool swa16_cpu_regs_isGp  (swa16_cpu_regs_t reg);
 LIBSWA16_API bool swa16_cpu_regs_isNull(swa16_cpu_regs_t reg);

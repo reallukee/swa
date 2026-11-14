@@ -96,7 +96,7 @@ bool swa16_mem_wrds_gethi(const swa16_mem_t* mem, swa16_addr_t addr, swa16_byte_
 
 
 
-bool swa16_mem_wrds_set(swa16_mem_t* mem, swa16_addr_t addr, swa16_word_t in)
+bool swa16_mem_wrds_set(const swa16_mem_t* mem, swa16_addr_t addr, swa16_word_t in)
 {
     if (mem == NULL)
     {
@@ -113,7 +113,7 @@ bool swa16_mem_wrds_set(swa16_mem_t* mem, swa16_addr_t addr, swa16_word_t in)
     return true;
 }
 
-bool swa16_mem_wrds_setlo(swa16_mem_t* mem, swa16_addr_t addr, swa16_byte_t in)
+bool swa16_mem_wrds_setlo(const swa16_mem_t* mem, swa16_addr_t addr, swa16_byte_t in)
 {
     swa16_word_t word_in = 0;
 
@@ -122,7 +122,7 @@ bool swa16_mem_wrds_setlo(swa16_mem_t* mem, swa16_addr_t addr, swa16_byte_t in)
     return swa16_mem_wrds_set(mem, addr, word_in);
 }
 
-bool swa16_mem_wrds_sethi(swa16_mem_t* mem, swa16_addr_t addr, swa16_byte_t in)
+bool swa16_mem_wrds_sethi(const swa16_mem_t* mem, swa16_addr_t addr, swa16_byte_t in)
 {
     swa16_word_t word_in = 0;
 

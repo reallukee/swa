@@ -30,7 +30,7 @@ bool swa16_cpu_pc_init(swa16_cpu_t* cpu)
         return true;
     }
 
-    cpu->pc = SWA16_CPU_PC_ENTRYPOINT;
+    memset(cpu->pc, 0, SWA16_CPU_PC_SIZE * sizeof(cpu->pc));
 
     cpu->pc_init = true;
 
@@ -56,7 +56,7 @@ bool swa16_cpu_pc_get(const swa16_cpu_t* cpu, swa16_word_t* out)
         return false;
     }
 
-    *out = cpu->pc;
+    *out = cpu->pc[0];
 
     return true;
 }
@@ -75,19 +75,19 @@ bool swa16_cpu_pc_getra(const swa16_cpu_t* cpu, swa16_word_t* out)
 
 
 
-bool swa16_cpu_pc_set(swa16_cpu_t* cpu, swa16_word_t in)
+bool swa16_cpu_pc_set(const swa16_cpu_t* cpu, swa16_word_t in)
 {
     if (cpu == NULL)
     {
         return false;
     }
 
-    cpu->pc = in;
+    cpu->pc[0] = in;
 
     return true;
 }
 
-bool swa16_cpu_pc_setra(swa16_cpu_t* cpu, swa16_word_t in)
+bool swa16_cpu_pc_setra(const swa16_cpu_t* cpu, swa16_word_t in)
 {
     in = in + 1;
 
@@ -108,7 +108,7 @@ bool swa16_cpu_pc_inc(swa16_cpu_t* cpu)
         return false;
     }
 
-    if (!swa16_cpu_pc_isGp(cpu->pc + 1))
+    if (!swa16_cpu_pc_isGp(cpu->pc[0] + 1))
     {
         return false;
     }
@@ -125,7 +125,7 @@ bool swa16_cpu_pc_dec(swa16_cpu_t* cpu)
         return false;
     }
 
-    if (!swa16_cpu_pc_isGp(cpu->pc - 1))
+    if (!swa16_cpu_pc_isGp(cpu->pc[0] - 1))
     {
         return false;
     }

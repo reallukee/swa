@@ -48,9 +48,9 @@ LIBSWA16_API bool swa16_cpu_flgs_isInit(const swa16_cpu_t* cpu);
 LIBSWA16_API bool swa16_cpu_flgs_get (const swa16_cpu_t* cpu, swa16_cpu_flgs_t flg, swa16_flag_t* out);
 LIBSWA16_API bool swa16_cpu_flgs_islo(const swa16_cpu_t* cpu, swa16_cpu_flgs_t flg, bool* out);
 LIBSWA16_API bool swa16_cpu_flgs_ishi(const swa16_cpu_t* cpu, swa16_cpu_flgs_t flg, bool* out);
-LIBSWA16_API bool swa16_cpu_flgs_set (swa16_cpu_t* cpu, swa16_cpu_flgs_t flg, swa16_flag_t in);
-LIBSWA16_API bool swa16_cpu_flgs_tolo(swa16_cpu_t* cpu, swa16_cpu_flgs_t flg);
-LIBSWA16_API bool swa16_cpu_flgs_tohi(swa16_cpu_t* cpu, swa16_cpu_flgs_t flg);
+LIBSWA16_API bool swa16_cpu_flgs_set (const swa16_cpu_t* cpu, swa16_cpu_flgs_t flg, swa16_flag_t in);
+LIBSWA16_API bool swa16_cpu_flgs_tolo(const swa16_cpu_t* cpu, swa16_cpu_flgs_t flg);
+LIBSWA16_API bool swa16_cpu_flgs_tohi(const swa16_cpu_t* cpu, swa16_cpu_flgs_t flg);
 
 LIBSWA16_API bool swa16_cpu_flgs_isGp  (swa16_cpu_flgs_t flg);
 LIBSWA16_API bool swa16_cpu_flgs_isNull(swa16_cpu_flgs_t flg);

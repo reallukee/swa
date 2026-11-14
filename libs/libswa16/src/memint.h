@@ -31,7 +31,7 @@ typedef struct swa16_mem
 
     bool wrds_init;
 
-    swa16_word_t wrds[SWA16_MEM_WRDS_SIZE];
+    swa16_word_t* wrds;
 } swa16_mem_t;
 
 LIBSWA16_NAMESPACE_END

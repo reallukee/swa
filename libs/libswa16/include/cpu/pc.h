@@ -40,8 +40,8 @@ LIBSWA16_API bool swa16_cpu_pc_isInit(const swa16_cpu_t* cpu);
 
 LIBSWA16_API bool swa16_cpu_pc_get  (const swa16_cpu_t* cpu, swa16_word_t* out);
 LIBSWA16_API bool swa16_cpu_pc_getra(const swa16_cpu_t* cpu, swa16_word_t* out);
-LIBSWA16_API bool swa16_cpu_pc_set  (swa16_cpu_t* cpu, swa16_word_t in);
-LIBSWA16_API bool swa16_cpu_pc_setra(swa16_cpu_t* cpu, swa16_word_t in);
+LIBSWA16_API bool swa16_cpu_pc_set  (const swa16_cpu_t* cpu, swa16_word_t in);
+LIBSWA16_API bool swa16_cpu_pc_setra(const swa16_cpu_t* cpu, swa16_word_t in);
 
 LIBSWA16_API bool swa16_cpu_pc_add(swa16_cpu_t* cpu, swa16_word_t value);
 LIBSWA16_API bool swa16_cpu_pc_sub(swa16_cpu_t* cpu, swa16_word_t value);

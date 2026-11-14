@@ -27,15 +27,33 @@ swa16_mem_t* swa16_mem_alloc()
 
     mem->init = false;
 
-    mem->wrds_init = false;
+    mem->wrds = (swa16_word_t*)calloc(
+        SWA16_MEM_WRDS_SIZE, sizeof(mem->wrds)
+    );
 
-    memset(mem->wrds, 0, sizeof(mem->wrds));
+    if (mem->wrds == NULL)
+    {
+        swa16_mem_free(mem);
+
+        return NULL;
+    }
+
+    memset(mem->wrds, 0, SWA16_MEM_WRDS_SIZE * sizeof(mem->wrds));
+
+    mem->wrds_init = false;
 
     return mem;
 }
 
 void swa16_mem_free(swa16_mem_t* mem)
 {
+    if (mem == NULL)
+    {
+        return;
+    }
+
+    free(mem->wrds);
+
     free(mem);
 }
 

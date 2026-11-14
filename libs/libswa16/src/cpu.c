@@ -27,19 +27,49 @@ swa16_cpu_t* swa16_cpu_alloc()
 
     cpu->init = false;
 
+    cpu->regs = (swa16_word_t*)calloc(
+        SWA16_CPU_REGS_SIZE, sizeof(cpu->regs)
+    );
+
+    cpu->pc = (swa16_word_t*)calloc(
+        SWA16_CPU_PC_SIZE, sizeof(cpu->pc)
+    );
+
+    cpu->flgs = (swa16_word_t*)calloc(
+        SWA16_CPU_FLGS_SIZE, sizeof(cpu->flgs)
+    );
+
+    if (cpu->regs == NULL ||
+        cpu->pc   == NULL ||
+        cpu->flgs == NULL )
+    {
+        swa16_cpu_free(cpu);
+
+        return NULL;
+    }
+
+    memset(cpu->regs, 0, SWA16_CPU_REGS_SIZE * sizeof(cpu->regs));
+    memset(cpu->pc,   0,     SWA16_CPU_PC_SIZE * sizeof(cpu->pc));
+    memset(cpu->flgs, 0, SWA16_CPU_FLGS_SIZE * sizeof(cpu->flgs));
+
     cpu->regs_init = false;
     cpu->pc_init   = false;
     cpu->flgs_init = false;
-
-    memset(cpu->regs, 0, sizeof(cpu->regs));
-    cpu->pc = 0;
-    memset(cpu->flgs, 0, sizeof(cpu->flgs));
 
     return cpu;
 }
 
 void swa16_cpu_free(swa16_cpu_t* cpu)
 {
+    if (cpu == NULL)
+    {
+        return;
+    }
+
+    free(cpu->regs);
+    free(cpu->pc);
+    free(cpu->flgs);
+
     free(cpu);
 }
 

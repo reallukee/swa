@@ -41,9 +41,9 @@ LIBSWA16_API bool swa16_mem_wrds_isInit(const swa16_mem_t* mem);
 LIBSWA16_API bool swa16_mem_wrds_get  (const swa16_mem_t* mem, swa16_addr_t addr, swa16_word_t* out);
 LIBSWA16_API bool swa16_mem_wrds_getlo(const swa16_mem_t* mem, swa16_addr_t addr, swa16_byte_t* out);
 LIBSWA16_API bool swa16_mem_wrds_gethi(const swa16_mem_t* mem, swa16_addr_t addr, swa16_byte_t* out);
-LIBSWA16_API bool swa16_mem_wrds_set  (swa16_mem_t* mem, swa16_addr_t addr, swa16_word_t in);
-LIBSWA16_API bool swa16_mem_wrds_setlo(swa16_mem_t* mem, swa16_addr_t addr, swa16_byte_t in);
-LIBSWA16_API bool swa16_mem_wrds_sethi(swa16_mem_t* mem, swa16_addr_t addr, swa16_byte_t in);
+LIBSWA16_API bool swa16_mem_wrds_set  (const swa16_mem_t* mem, swa16_addr_t addr, swa16_word_t in);
+LIBSWA16_API bool swa16_mem_wrds_setlo(const swa16_mem_t* mem, swa16_addr_t addr, swa16_byte_t in);
+LIBSWA16_API bool swa16_mem_wrds_sethi(const swa16_mem_t* mem, swa16_addr_t addr, swa16_byte_t in);
 
 LIBSWA16_API bool swa16_mem_wrds_isGp  (swa16_addr_t addr);
 LIBSWA16_API bool swa16_mem_wrds_isNull(swa16_addr_t addr);

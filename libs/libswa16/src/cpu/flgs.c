@@ -28,7 +28,7 @@ bool swa16_cpu_flgs_init(swa16_cpu_t* cpu)
         return true;
     }
 
-    memset(cpu->flgs, 0, sizeof(cpu->flgs));
+    memset(cpu->flgs, 0, SWA16_CPU_FLGS_SIZE * sizeof(cpu->flgs));
 
     cpu->flgs_init = true;
 
@@ -104,9 +104,9 @@ bool swa16_cpu_flgs_ishi(
 
 
 bool swa16_cpu_flgs_set(
-    swa16_cpu_t*     cpu,
-    swa16_cpu_flgs_t flg,
-    swa16_flag_t     in)
+    const swa16_cpu_t* cpu,
+    swa16_cpu_flgs_t   flg,
+    swa16_flag_t       in)
 {
     if (cpu == NULL)
     {
@@ -124,8 +124,8 @@ bool swa16_cpu_flgs_set(
 }
 
 bool swa16_cpu_flgs_tolo(
-    swa16_cpu_t*     cpu,
-    swa16_cpu_flgs_t flg)
+    const swa16_cpu_t* cpu,
+    swa16_cpu_flgs_t   flg)
 {
     if (!swa16_cpu_flgs_set(cpu, flg, false))
     {
@@ -136,8 +136,8 @@ bool swa16_cpu_flgs_tolo(
 }
 
 bool swa16_cpu_flgs_tohi(
-    swa16_cpu_t*     cpu,
-    swa16_cpu_flgs_t flg)
+    const swa16_cpu_t* cpu,
+    swa16_cpu_flgs_t   flg)
 {
     if (!swa16_cpu_flgs_set(cpu, flg, true))
     {
