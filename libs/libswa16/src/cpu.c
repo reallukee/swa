@@ -48,10 +48,6 @@ swa16_cpu_t* swa16_cpu_alloc()
         return NULL;
     }
 
-    memset(cpu->regs, 0, SWA16_CPU_REGS_SIZE * sizeof(cpu->regs));
-    memset(cpu->pc,   0,     SWA16_CPU_PC_SIZE * sizeof(cpu->pc));
-    memset(cpu->flgs, 0, SWA16_CPU_FLGS_SIZE * sizeof(cpu->flgs));
-
     cpu->regs_init = false;
     cpu->pc_init   = false;
     cpu->flgs_init = false;

@@ -29,6 +29,8 @@
 
 #include "insts.h"
 
+#include "prgm.h"
+
 LIBSWA16_NAMESPACE_BEGIN
 
 #define LIBSWA16_VERSION_H     200

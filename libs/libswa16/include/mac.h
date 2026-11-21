@@ -43,6 +43,8 @@ LIBSWA16_API const swa16_nvm_t* swa16_mac_get_nvm(const swa16_mac_t* mac);
 LIBSWA16_API const swa16_ram_t* swa16_mac_get_ram(const swa16_mac_t* mac);
 LIBSWA16_API const swa16_rom_t* swa16_mac_get_rom(const swa16_mac_t* mac);
 
+LIBSWA16_API swa16_isa_sign_t swa16_mac_run(const swa16_mac_t* mac, const swa16_prgm_t* prgm);
+
 LIBSWA16_NAMESPACE_END
 
 #endif // !LIBSWA16_MAC_H

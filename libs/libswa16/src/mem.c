@@ -38,8 +38,6 @@ swa16_mem_t* swa16_mem_alloc()
         return NULL;
     }
 
-    memset(mem->wrds, 0, SWA16_MEM_WRDS_SIZE * sizeof(mem->wrds));
-
     mem->wrds_init = false;
 
     return mem;

@@ -23,6 +23,8 @@
 
 #include "instsint.h"
 
+#include "prgmint.h"
+
 LIBSWA16_NAMESPACE_BEGIN
 
 LIBSWA16_NAMESPACE_END

@@ -25,6 +25,8 @@
 
 #include "instsint.h"
 
+#include "prgmint.h"
+
 LIBSWA16_NAMESPACE_BEGIN
 
 typedef struct swa16_mac
